@@ -14,9 +14,9 @@ export const WorkPostTemplate = ({
   tags,
   title,
   helmet,
+  images,
 }) => {
   const PostContent = contentComponent || Content
-
   return (
     <section className="section">
       {helmet || ''}
@@ -28,6 +28,7 @@ export const WorkPostTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
+            {images.map(image => <PreviewCompatibleImage imageInfo={image} />)}
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <ul className="taglist">
@@ -63,6 +64,7 @@ const Work = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        images={post.frontmatter.images}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -96,6 +98,15 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         tags
+        images {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }
