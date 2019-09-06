@@ -1,9 +1,10 @@
 ---
 templateKey: work-page
 title: Caminares
-image: /img/caminares14-min.jpg
+image: /img/caminares15-min.jpg
 images:
   - image: /img/caminares0-min.jpg
+  - image: /img/caminares15-min.jpg
   - image: /img/caminares3-min.jpg
   - image: /img/caminares4-min.jpg
   - image: /img/caminares5-min.jpg
@@ -14,8 +15,6 @@ images:
   - image: /img/caminares10-min.jpg
   - image: /img/caminares11-min.jpg
   - image: /img/caminares12-min.jpg
-  - image: /img/caminares13-min.jpg
-  - image: /img/caminares14-min.jpg
 tags:
   - editorial
   - ilustración
