@@ -29,6 +29,8 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "work-page"}
       - {label: Titulo, name: title, widget: string}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Orden", name: "order", widget: "number", min: 0 }
       - {label: Preview, name: image, widget: image}
       - {label: Texto, name: body, widget: markdown }
       - {label: Imagenes, name: images, widget: list, fields: [{label: Image, name: image, widget: image}]}
