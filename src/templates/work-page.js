@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Masonry from '../components/Masonry'
 
 export const WorkPostTemplate = ({
   content,
@@ -28,7 +28,7 @@ export const WorkPostTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
-            {images.map(image => <PreviewCompatibleImage imageInfo={image} />)}
+            <Masonry images={images} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <ul className="taglist">
