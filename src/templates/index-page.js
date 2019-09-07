@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import About from '../components/About';
+import Curriculum from '../components/Curriculum';
 
 export const IndexPageTemplate = ({
   title,
@@ -17,7 +18,10 @@ export const IndexPageTemplate = ({
         <h2>{subheading}</h2>
       </header>
       <BlogRoll />
-      <About />
+      <div className="profile--block bottom-section">
+        <About />
+        <Curriculum />
+      </div>
   </div>
 )
 

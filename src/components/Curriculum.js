@@ -3,18 +3,13 @@ import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import { HTMLContent } from '../components/Content'
 
-class About extends PureComponent {
+class Curriculum extends PureComponent {
   render() {
     console.log(this.props);
     return (
       <div className="profile--section">
-        <h1 id="#about">{this.props.data.markdownRemark.frontmatter.title}</h1>
-        <PreviewCompatibleImage 
-          imageInfo={this.props.data.markdownRemark.frontmatter.image}
-        />
-        <div style={{ marginTop: '1rem' }}>
-          <HTMLContent content={this.props.data.markdownRemark.html} />
-        </div>
+        <h1 id="#cv">{this.props.data.markdownRemark.frontmatter.title}</h1>
+        <HTMLContent content={this.props.data.markdownRemark.html} />
         
       </div>
     );
@@ -24,8 +19,8 @@ class About extends PureComponent {
 export default () => (
   <StaticQuery
     query={graphql`
-    query AboutTemplate {
-      markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
+    query CurriculumTemplate {
+      markdownRemark(frontmatter: { templateKey: { eq: "product-page" } }) {
         html
         frontmatter {
           title
@@ -40,6 +35,6 @@ export default () => (
       }
     }
   `}
-    render={(data, count) => <About data={data} count={count} />}
+    render={(data, count) => <Curriculum data={data} count={count} />}
   />
 )

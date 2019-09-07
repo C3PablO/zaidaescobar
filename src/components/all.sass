@@ -1,11 +1,24 @@
 $border_radius: 5px;
+$color: #312f40;
+$background: #fefffb;
 
 body
-  background: #fefffb;
-  color: #312f40;
+  background: $background;
+  color: $color;
+
+button:focus
+  outline: 0;
+
+a
+  display: inline-block;
+
+.bottom-section
+  margin-top: 30px;
+  border-top: 1px solid;
 
 .main-header
-  text-align: center
+  text-align: center;
+  padding-top: 60px;
 
 .main-header h1
   margin: 0;
@@ -85,6 +98,9 @@ body
   padding: 10px;
   margin: 0 auto;
 
+.blog-page--title
+  text-align: center;
+  padding-top: 50px;
   
 // grid
 .grid
@@ -108,7 +124,6 @@ body
   background: rgba(0, 0, 0, 0.8);
   border-radius: $border_radius;
   padding: 5px 10px;
-  display: inline-block;
   margin: 5px;
 
 .tags--tag a
@@ -123,5 +138,126 @@ body
 .profile--block
   display: flex;
 
+.profile--block ul
+  list-style: none;
+  margin: 0;
+
 .profile--section
   width: 50%;
+  padding: 15px 20px;
+
+.profile--section:last-child
+  text-align: right;
+
+
+// top nav
+.top-nav
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  background: $color;
+  z-index: 100;
+  min-height: 3rem;
+  padding: 0 10px;
+  z-index: 102;
+
+.top-nav--section
+  width: 33.3%;
+  position: relative;
+  display: flex;
+
+.top-nav--section:last-child
+  text-align: right;
+
+.top-nav--link
+    font-family: 'Abril Fatface','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-size: 3rem;
+    line-height: 1.1;
+    display: block;
+    text-align: center;
+    margin: 0 10px;
+    color: $background;
+    text-decoration: none;
+    margin: 10px;
+
+.top-nav--link:hover
+  text-decoration: underline
+  
+.logo
+  font-family: 'Abril Fatface','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: $background;
+  text-decoration: none;
+  position: relative;
+  z-index: 200;
+  margin: 0 auto;
+
+.top-nav-links
+  transition: all 500ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  z-index: 101;
+
+.top-nav-links__active
+  top: 0;
+
+.top-nav--button
+  cursor: pointer;
+  font-family: 'Abril Fatface','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: $background;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  background: none;
+  margin-left: auto;
+
+.top-nav--button:hover
+  text-decoration: underline;
+
+.top-nav--icon
+    height: 1.2rem;
+    fill: $background;
+    margin-right: 10px;
+
+.top-nav--social
+  text-align: left;
+
+.top-nav--social a
+  display: flex;
+  align-items: center;
+
+// footer
+.footer
+  background: $color;
+  padding: 10px;
+  text-align: center;
+
+.footer a
+  color: $background;
+  text-decoration: none;
+
+.footer a:hover
+  text-decoration: underline;
+
+.footer h2
+  margin: 0;

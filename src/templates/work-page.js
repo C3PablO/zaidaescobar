@@ -18,7 +18,7 @@ export const WorkPostTemplate = ({
   const PostContent = contentComponent || Content
   return (
     <div className="blog-page--wrapper">
-      <div className="blog-page--text">
+      <div className="blog-page--text blog-page--title">
         <h1>
           {title}
         </h1>
@@ -34,8 +34,10 @@ export const WorkPostTemplate = ({
         </ul>
       ) : null}
       <Masonry images={images} />
-      <h1>Otros trabajos</h1>
-      <BlogRoll />
+      <div className="bottom-section">
+        <h1>Obra</h1>
+        <BlogRoll />
+      </div>
     </div>
   )
 }

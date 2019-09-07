@@ -10,7 +10,7 @@ const typography = new Typography({
     {
       name: 'Raleway',
       styles: [
-        '300', '400',
+        '300', '600',
       ],
     },
   ],
@@ -21,7 +21,7 @@ const typography = new Typography({
   bodyGray: 20,
   headerWeight: 400,
   bodyWeight: 300,
-  boldWeight: 400,
+  boldWeight: 600,
   headerFontFamily: [
     "Abril Fatface",
     "Helvetica Neue",
