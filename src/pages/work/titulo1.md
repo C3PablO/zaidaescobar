@@ -1,6 +1,8 @@
 ---
 templateKey: work-page
 title: titulo1
+order: 3
+color: '#33cc66'
 image: /img/blog-index.jpg
 images:
   - image: /img/blog-index.jpg

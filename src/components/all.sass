@@ -23,9 +23,8 @@ body
   overflow: hidden;
   margin: 5px;
 
-.blog-pod--image:after
+.blog-pod--image--overlay
   transition: transform 1000ms;
-  content: "";
   border-radius: 50%;
   position: absolute;
   width: 30px;
@@ -58,7 +57,7 @@ body
   opacity: 0;
 
 //blog pod hover
-.blog-pod--image:hover:after
+.blog-pod--image:hover .blog-pod--image--overlay
   transform: scale(30);
   opacity: 1;
 

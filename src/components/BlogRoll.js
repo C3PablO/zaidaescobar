@@ -12,6 +12,10 @@ const Item = ({ imageInfo }) => (
           <h3>{imageInfo.node.frontmatter.title}</h3>
         </div>
         <div className="blog-pod--image--wrapper">
+          <span
+            className="blog-pod--image--overlay"
+            style={{ background: imageInfo.node.frontmatter.color }}
+          />
           <PreviewCompatibleImage
             imageInfo={{
               image: imageInfo.node.frontmatter.image,
@@ -51,7 +55,7 @@ export default () => (
     query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___title] }
+          sort: { order: ASC, fields: [frontmatter___order] }
           filter: { frontmatter: { templateKey: { eq: "work-page" } } }
         ) {
           edges {
@@ -63,6 +67,7 @@ export default () => (
               }
               frontmatter {
                 title
+                color
                 templateKey
                 image {
                   childImageSharp {
