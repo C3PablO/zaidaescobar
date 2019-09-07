@@ -1,3 +1,14 @@
+$border_radius: 5px;
+
+body
+  background: #fefffb;
+  color: #312f40;
+
+.main-header
+  text-align: center
+
+.main-header h1
+  margin: 0;
 
 // blog grid
 .blog-pod__3
@@ -7,34 +18,61 @@
   display: block;
   position: relative;
 
-.blog-pod a:after
-  transition: all 500ms;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: transparent;
-  opacity: 0;
-  z-index: 1;
-
-.blog-pod a:hover:after
-  transition: all 500ms;
-  background: yellow;
-  opacity: 1;
-
 .blog-pod--image
+  position: relative;
+  overflow: hidden;
   margin: 5px;
 
-.blog-post--title
+.blog-pod--image:after
+  transition: transform 1000ms;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  background: #d81b60;
+  z-index: 1;
+  opacity: 0;
+
+.blog-pod--image--wrapper
+  transition: all 300ms;
+  transform: scale(1, 1)
+
+.blog-pod--title
+  transition: all 300ms;
   position: absolute
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 2;
-  color: #fff;
+  color: #fefffb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(20px)
+  opacity: 0;
+
+//blog pod hover
+.blog-pod--image:hover:after
+  transform: scale(30);
+  opacity: 1;
+
+.blog-pod--image:hover .blog-pod--image--wrapper
+  transform: scale(1.5, 1.5)
+
+.blog-pod--image:hover .blog-pod--title
+  transform: translateY(0px)
+  opacity: .8;
+
+// index page
+.index-page
+  max-width: 1300px;
+  margin: 0 auto
 
 // blog page
 .blog-page--wrapper
@@ -69,7 +107,7 @@
 
 .tags--tag
   background: rgba(0, 0, 0, 0.8);
-  border-radius: 5px;
+  border-radius: $border_radius;
   padding: 5px 10px;
   display: inline-block;
   margin: 5px;

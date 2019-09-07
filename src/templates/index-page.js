@@ -10,9 +10,11 @@ export const IndexPageTemplate = ({
   title,
   subheading,
 }) => (
-  <div>
-      <h1>{title}</h1>
-      <h2>{subheading}</h2>
+  <div className="index-page">
+      <header className="main-header">
+        <h1 data-title={title}>{title}</h1>
+        <h2>{subheading}</h2>
+      </header>
       <BlogRoll />
   </div>
 )

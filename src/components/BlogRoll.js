@@ -2,7 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Masonry from './Masonry';
 
+const Item = ({ imageInfo }) => (
+  <article key={imageInfo.node.id} className="blog-pod">
+    <Link to={imageInfo.node.fields.slug}>
+      <div className="blog-pod--image">
+        <div className="blog-pod--title">
+          <h3>{imageInfo.node.frontmatter.title}</h3>
+        </div>
+        <div className="blog-pod--image--wrapper">
+          <PreviewCompatibleImage
+            imageInfo={{
+              image: imageInfo.node.frontmatter.image,
+              alt: `featured image thumbnail for post ${
+                imageInfo.node.title
+              }`,
+            }}
+          />
+        </div>
+      </div>
+    </Link>
+  </article>
+)
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
@@ -10,25 +32,7 @@ class BlogRoll extends React.Component {
 
     return (
       <div className="columns is-multiline">
-        {posts && posts.map(({ node: post }) => (
-          <article key={post.id} className="blog-pod blog-pod__3">
-            <Link to={post.fields.slug}>
-              <div className="blog-post--title">
-                <h3>{post.frontmatter.title}</h3>
-              </div>
-              <div className="blog-pod--image">
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: post.frontmatter.image,
-                    alt: `featured image thumbnail for post ${
-                      post.title
-                    }`,
-                  }}
-                />
-              </div>
-            </Link>
-          </article>))
-        }
+        <Masonry images={posts} cols={3} renderer={Item} />
       </div>
     )
   }  
