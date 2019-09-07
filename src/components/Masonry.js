@@ -9,7 +9,7 @@ const Image = renderer || PreviewCompatibleImage;
     {columns.map((column, c) => (
       <div className="grid-col" key={c}>
         {column.map((image, i) => (
-          <div className="grid-item">
+          <div className="grid-item" key={i}>
             <Image imageInfo={image} key={i} />
           </div>
         ))}

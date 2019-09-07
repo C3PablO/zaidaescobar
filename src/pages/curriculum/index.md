@@ -1,6 +1,6 @@
 ---
 templateKey: 'about-page'
-path: /about
+path: /curriculum
 title: Sobre mi
 image: /img/profile.jpg
 ---

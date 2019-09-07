@@ -5,7 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import About from './about-page';
+import About from '../components/About';
 
 export const IndexPageTemplate = ({
   title,
@@ -13,10 +13,11 @@ export const IndexPageTemplate = ({
 }) => (
   <div className="index-page">
       <header className="main-header">
-        <h1 data-title={title}>{title}</h1>
+        <h1>{title}</h1>
         <h2>{subheading}</h2>
       </header>
       <BlogRoll />
+      <About />
   </div>
 )
 
@@ -62,25 +63,6 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
