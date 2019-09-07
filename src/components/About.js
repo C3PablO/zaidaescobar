@@ -5,10 +5,9 @@ import { HTMLContent } from '../components/Content'
 
 class About extends PureComponent {
   render() {
-    console.log(this.props);
     return (
       <div className="profile--section">
-        <h1 id="#about">{this.props.data.markdownRemark.frontmatter.title}</h1>
+        <h1 id="about">{this.props.data.markdownRemark.frontmatter.title}</h1>
         <PreviewCompatibleImage 
           imageInfo={this.props.data.markdownRemark.frontmatter.image}
         />

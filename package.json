@@ -32,6 +32,8 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.19",
+    "scroll-to-element": "^2.0.3",
+    "smooth-scroll": "^16.1.0",
     "typography": "^0.16.19",
     "uuid": "^3.2.1"
   },
