@@ -4,7 +4,6 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 const Masonry = ({ cols = 2, images }) => {
 // console.log(createColumns(images, cols));
 const columns = createColumns(images, images.length / cols);
-console.log(images);
  return (
   <div className="grid">
     {columns.map((column, c) => (

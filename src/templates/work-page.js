@@ -6,44 +6,37 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Masonry from '../components/Masonry'
+import BlogRoll from '../components/BlogRoll'
 
 export const WorkPostTemplate = ({
   content,
   contentComponent,
-  description,
   tags,
   title,
-  helmet,
   images,
 }) => {
   const PostContent = contentComponent || Content
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            <Masonry images={images} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
-        </div>
+    <div className="blog-page--wrapper">
+      <div className="blog-page--text">
+        <h1>
+          {title}
+        </h1>
+        <PostContent content={content} />
       </div>
-    </section>
+      {tags && tags.length ? (
+        <ul className="tags">
+          {tags.map(tag => (
+            <li key={tag + `tag`} className="tags--tag">
+              <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      <Masonry images={images} />
+      <h1>Otros trabajos</h1>
+      <BlogRoll />
+    </div>
   )
 }
 
@@ -101,7 +94,7 @@ export const pageQuery = graphql`
         images {
           image {
             childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
+              fluid(maxWidth: 700, quality: 64) {
                 ...GatsbyImageSharpFluid
               }
             }
