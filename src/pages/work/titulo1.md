@@ -1,9 +1,10 @@
 ---
 templateKey: work-page
-title: titulo1
+title: Proyecto prueba
+date: 2019-09-07T23:52:32.226Z
 order: 3
-color: '#33cc66'
-image: /img/blog-index.jpg
+color: '#0097a7'
+image: /img/prueba.png
 images:
   - image: /img/blog-index.jpg
   - image: /img/home-jumbotron.jpg
