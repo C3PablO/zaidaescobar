@@ -4,11 +4,11 @@ title: Caminares
 image: /img/caminares15-min.jpg
 images:
   - image: /img/caminares0-min.jpg
-  - image: /img/caminares15-min.jpg
   - image: /img/caminares3-min.jpg
   - image: /img/caminares4-min.jpg
   - image: /img/caminares5-min.jpg
   - image: /img/caminares6-min.jpg
+  - image: /img/caminares15-min.jpg
   - image: /img/caminares8-min.jpg
   - image: /img/caminares9-min.jpg
   - image: /img/caminares10-min.jpg
