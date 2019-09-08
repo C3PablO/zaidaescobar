@@ -312,3 +312,29 @@ a
   display: flex;
   align-items: center;
   justify-content: center;
+
+
+// small screen
+@media screen and (max-width: 800px)
+  h1
+    font-size: 30px;
+  h3
+    font-size: 27px;
+  h3
+    font-size: 25px;
+  h4
+    font-size: 23px;
+  
+  .blog-pod--title h3
+    font-size: 15px;
+
+// small screen
+@media screen and (max-width: 600px)
+  .grid
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+
+  .blog-pod--title h3
+    font-size: 20px;
+
