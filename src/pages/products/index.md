@@ -1,6 +1,5 @@
 ---
 templateKey: 'product-page'
-path: /products
 title: Curriculum
 ---
 * Coffee is a small tree or shrub that grows in the forest understory - **2000**

@@ -1,6 +1,5 @@
 ---
 templateKey: 'about-page'
-path: /about
 title: Sobre mi
 image: /img/profile.jpg
 ---
