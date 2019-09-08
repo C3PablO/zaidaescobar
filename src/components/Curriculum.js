@@ -4,7 +4,6 @@ import { HTMLContent } from '../components/Content'
 
 class Curriculum extends PureComponent {
   render() {
-    console.log(this.props);
     return (
       <div className="profile--section">
         <h1 id="cv">{this.props.data.markdownRemark.frontmatter.title}</h1>

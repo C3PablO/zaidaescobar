@@ -25,7 +25,6 @@ const Navbar = class extends React.Component {
       // which was passed in as an onClick prop on our Link.
       // An event was also passed, we'll preventDefault()
       const anchor = e.nativeEvent.target.href.split('/#')[1];
-      console.log(e.nativeEvent.target.href.split('/#'), "!!!!!!!!!");
       if (anchor) {
         scrollToElement(document.getElementById(anchor), {
           offset: -100,
