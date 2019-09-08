@@ -6,6 +6,22 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - label: "Test"
+    name: "test"
+    files:
+      - file: "src/sections/test.md"
+        label: "Locations Page"
+        name: "locations"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Locations
+            name: locations
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Address, name: address, widget: string}
+
   - name: "work"
     label: "Trabajos"
     folder: "src/pages/work"
@@ -46,8 +62,8 @@ collections:
       
       - file: "src/pages/products/index.md"
         label: "Curriculum"
-        name: "products"
+        name: "curriculum"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "curriculum-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
