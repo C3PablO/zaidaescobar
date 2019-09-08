@@ -50,6 +50,7 @@ export default class Index extends React.Component {
                 <h1 className="page-contact--title">Dejame un mensaje</h1>
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="subject" value="Mensaje desde formulario de contacto" />
                 <div hidden>
                   <label>
                     Don’t fill this out:{' '}
