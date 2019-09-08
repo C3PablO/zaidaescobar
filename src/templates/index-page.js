@@ -14,14 +14,16 @@ const Content = ({
   subheading,
 }) => (
   <div className="index-page" id="work">
-      <header className="main-header">
-        <h1>{title}</h1>
-        <h2>{subheading}</h2>
-      </header>
-      <BlogRoll />
-      <div className="profile--block bottom-section">
-        <About />
-        <Curriculum />
+      <div className="index-page--wrapper">
+        <header className="main-header">
+          <h1>{title}</h1>
+          <h2>{subheading}</h2>
+        </header>
+        <BlogRoll />
+        <div className="profile--block bottom-section">
+          <About />
+          <Curriculum />
+        </div>
       </div>
   </div>
 )

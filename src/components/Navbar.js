@@ -12,6 +12,11 @@ const Navbar = class extends React.Component {
   }
 
   _handleLinkClick = (e, target) => {
+    this._handleScroll(e, target);
+    this.toggleHamburger();
+  }
+
+  _handleScroll = (e, targe) => {
     // NODE-SAFE CODE
     // Gatsby uses Node to generate our pages. 
     // Node doesn't know what a window is. 
@@ -19,21 +24,20 @@ const Navbar = class extends React.Component {
     // in some sort of node-safe if statement like this:
     
     if (typeof window !== undefined) {
-      
       // First, are we on the home page?
       // If so, let's scroll to the desired block,
       // which was passed in as an onClick prop on our Link.
       // An event was also passed, we'll preventDefault()
       const anchor = e.nativeEvent.target.href.split('/#')[1];
       if (anchor) {
-        scrollToElement(document.getElementById(anchor), {
-          offset: -100,
+        return scrollToElement(document.getElementById(anchor), {
+          offset: 0,
           duration: 1000,
         })
       }
     }
-    this.toggleHamburger();
-  }
+
+  } 
 
   toggleHamburger = () => {
     // toggle the active boolean in the state
@@ -99,7 +103,7 @@ const Navbar = class extends React.Component {
           </a>
         </div>
         <div className="top-nav--section">
-          <Link to="/#work" title="Logo" className="logo">
+          <Link to="/#work" title="Logo" className="logo" onClick={this._handleScroll}>
             ZE
           </Link>
         </div>

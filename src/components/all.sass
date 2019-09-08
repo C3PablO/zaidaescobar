@@ -12,13 +12,22 @@ button:focus, input:focus, textarea:focus
 a
   display: inline-block;
 
+// animations
+@keyframes showup
+  from
+    opacity: 0;
+    transform: translateY(50px);
+  to
+    opacity: 1;
+    transform: translateY(0px);
+
+
 .bottom-section
   margin-top: 30px;
   border-top: 1px solid;
 
 .main-header
   text-align: center;
-  padding-top: 60px;
 
 .main-header h1
   margin: 0;
@@ -85,12 +94,19 @@ a
 .index-page
   max-width: 1300px;
   margin: 0 auto
+  padding-top: 60px;
+
+.index-page--wrapper
+  animation-name: showup;
+  animation-duration: 1s;
 
 // blog page
 .blog-page--wrapper
   max-width: 1300px;
   padding: 10px;
   margin: 0 auto;
+  animation-name: showup;
+  animation-duration: 1s;
 
 
 .blog-page--text
@@ -266,6 +282,8 @@ a
 
 // page contact
 .page-contact
+  animation-name: showup;
+  animation-duration: 1s;
   padding-top: 60px;
   height: 100vh;
   display: flex;
@@ -315,6 +333,16 @@ a
 
 
 // small screen
+@media screen and (max-width: 900px)
+  .profile--block
+    display: block;
+  
+  .profile--section
+    width: 100%;
+  
+  .profile--section:last-child
+    text-align: left;
+
 @media screen and (max-width: 800px)
   h1
     font-size: 30px;
