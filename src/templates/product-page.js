@@ -1,13 +1,7 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import RedirecttIndex from '../components/RedirectIndex'
+const Page = () => <RedirecttIndex path="/#product" />
+export default Page;
 
-const ProductPage = () => {
-  return (
-    <Layout>
-      !!!
-    </Layout>
-  )
-}
-
-export default ProductPage
+export const ProductPageTemplate = () => '';
 

@@ -7,7 +7,9 @@ import BlogRoll from '../components/BlogRoll'
 import About from '../components/About';
 import Curriculum from '../components/Curriculum';
 
-export const IndexPageTemplate = ({
+export const IndexPageTemplate = () => '';
+
+const Content = ({
   title,
   subheading,
 }) => (
@@ -29,7 +31,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
+      <Content
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
