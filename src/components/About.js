@@ -24,7 +24,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     query AboutTemplate {
-      markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
+      markdownRemark(frontmatter: { templateKey: { eq: "about-section" } }) {
         html
         frontmatter {
           title
