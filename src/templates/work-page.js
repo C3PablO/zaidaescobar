@@ -28,7 +28,7 @@ export const WorkPostTemplate = ({
         <ul className="tags">
           {tags.map(tag => (
             <li key={tag + `tag`} className="tags--tag">
-              <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              {tag}
             </li>
           ))}
         </ul>
@@ -41,6 +41,9 @@ export const WorkPostTemplate = ({
     </div>
   )
 }
+
+// use this to link to the tags page instead
+//<Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
 
 WorkPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
