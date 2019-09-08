@@ -1,4 +1,0 @@
----
-templateKey: 'test'
-title: test
----

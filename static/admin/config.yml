@@ -8,16 +8,12 @@ public_folder: /img
 collections:
   - label: "Secciones"
     name: "sections"
-    editor:
-     preview: false
     files:
-      - file: "src/curriculum/index.md"
-        label: "Locations Page"
-        name: "locations"
-        editor:
-          preview: false
+      - file: "src/sections/curriculum/index.md"
+        label: "Curriculum"
+        name: "curriculum"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "curriculum-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "curriculum-section"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 
@@ -58,11 +54,3 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: Image, name: image, widget: image}
-      
-      - file: "src/pages/products/index.md"
-        label: "Curriculum"
-        name: "curriculum"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "curriculum-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}

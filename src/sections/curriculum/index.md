@@ -1,5 +1,5 @@
 ---
-templateKey: 'curriculum-page'
+templateKey: 'curriculum-section'
 title: Curriculum
 ---
 * Coffee is a small tree or shrub that grows in the forest understory - **2000**
@@ -20,4 +20,3 @@ title: Curriculum
 * Coffee is a small tree or shrub that grows in the forest understory - **2016**
 * Coffee is a small tree or shrub that grows in the forest understory - **2017**
 * Coffee is a small tree or shrub that grows in the forest understory - **2018**
-* Coffee is a small tree or shrub that grows in the forest understory - **2019**
