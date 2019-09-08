@@ -2,7 +2,7 @@ import React from 'react'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const Masonry = ({ cols = 2, images, renderer }) => {
-const columns = createColumns(images, images.length / cols);
+const columns = createColumns(images, cols);
 const Image = renderer || PreviewCompatibleImage;
  return (
   <div className="grid">
@@ -20,15 +20,15 @@ const Image = renderer || PreviewCompatibleImage;
 };
 
 const createColumns = (array = [], chunk = 2) => {
-  let i;
-  let j;
-  let temparray;
-  const arrays = [];
-  for (i = 0, j = array.length; i < j; i += chunk) {
-      temparray = array.slice(i,i+chunk);
-      arrays.push(temparray);
+  const arrayColumns = [];
+  for (let i = 0; i < chunk; i++) {
+    arrayColumns.push([]);
   }
-  return arrays;
+  array.forEach((item, i) => {
+    arrayColumns[i % arrayColumns.length].push(item)
+  });
+
+  return arrayColumns;
 }
 
 export default Masonry;

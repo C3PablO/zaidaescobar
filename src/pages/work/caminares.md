@@ -2,15 +2,15 @@
 templateKey: work-page
 title: Caminares
 image: /img/caminares15-min.jpg
-order: 2
+order: 1
 color: '#dea02f'
 images:
   - image: /img/caminares0-min.jpg
   - image: /img/caminares3-min.jpg
   - image: /img/caminares4-min.jpg
+  - image: /img/caminares15-min.jpg
   - image: /img/caminares5-min.jpg
   - image: /img/caminares6-min.jpg
-  - image: /img/caminares15-min.jpg
   - image: /img/caminares8-min.jpg
   - image: /img/caminares9-min.jpg
   - image: /img/caminares10-min.jpg

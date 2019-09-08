@@ -2,7 +2,7 @@
 templateKey: work-page
 title: trabajo prueba 2
 date: 2019-09-07T23:59:49.858Z
-order: 4
+order: 6
 color: '#4a148c'
 image: /img/prueba2.png
 images:
