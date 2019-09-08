@@ -36,10 +36,9 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout showFooter={false}>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1>Contact</h1>
+        <section>
+          <div>
+            <div className="page-contact">
               <form
                 name="contact"
                 method="post"
@@ -48,6 +47,7 @@ export default class Index extends React.Component {
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
+                <h1 className="page-contact--title">Contact</h1>
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
@@ -56,13 +56,12 @@ export default class Index extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
-                    Your name
+                <div>
+                  <label htmlFor={'name'}>
+                    Nombre
                   </label>
-                  <div className="control">
+                  <div>
                     <input
-                      className="input"
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -71,13 +70,12 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'email'}>
+                <div>
+                  <label htmlFor={'email'}>
                     Email
                   </label>
-                  <div className="control">
+                  <div>
                     <input
-                      className="input"
                       type={'email'}
                       name={'email'}
                       onChange={this.handleChange}
@@ -86,13 +84,12 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'message'}>
-                    Message
+                <div>
+                  <label htmlFor={'message'}>
+                    Mensaje
                   </label>
-                  <div className="control">
+                  <div>
                     <textarea
-                      className="textarea"
                       name={'message'}
                       onChange={this.handleChange}
                       id={'message'}
@@ -100,8 +97,8 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <button className="button is-link" type="submit">
+                <div>
+                  <button type="submit" className="page-contact--submit">
                     Send
                   </button>
                 </div>
