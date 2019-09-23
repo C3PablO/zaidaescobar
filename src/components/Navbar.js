@@ -17,26 +17,15 @@ const Navbar = class extends React.Component {
   }
 
   _handleScroll = (e, targe) => {
-    // NODE-SAFE CODE
-    // Gatsby uses Node to generate our pages. 
-    // Node doesn't know what a window is. 
-    // Be sure to wrap any of your browser interactions
-    // in some sort of node-safe if statement like this:
-    
     if (typeof window !== undefined) {
-      // First, are we on the home page?
-      // If so, let's scroll to the desired block,
-      // which was passed in as an onClick prop on our Link.
-      // An event was also passed, we'll preventDefault()
       const anchor = e.nativeEvent.target.href.split('/#')[1];
       if (anchor) {
         return scrollToElement(document.getElementById(anchor), {
-          offset: 0,
+          offset: -100,
           duration: 1000,
-        })
+        });
       }
     }
-
   } 
 
   toggleHamburger = () => {
