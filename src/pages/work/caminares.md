@@ -1,20 +1,20 @@
 ---
 templateKey: work-page
 title: Caminares
-image: /img/caminares15-min.jpg
+date: 2019-09-29T19:09:39.751Z
 order: 1
 color: '#dea02f'
+image: /img/9es.jpg
 images:
   - image: /img/caminares0-min.jpg
-  - image: /img/caminares3-min.jpg
+  - image: /img/1.jpg
   - image: /img/caminares4-min.jpg
-  - image: /img/caminares15-min.jpg
+  - image: /img/14.jpg
   - image: /img/caminares5-min.jpg
   - image: /img/caminares6-min.jpg
   - image: /img/caminares8-min.jpg
   - image: /img/caminares9-min.jpg
   - image: /img/caminares10-min.jpg
-  - image: /img/caminares11-min.jpg
   - image: /img/caminares12-min.jpg
 tags:
   - editorial
