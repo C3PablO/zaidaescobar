@@ -6,13 +6,17 @@ import { HTMLContent } from '../components/Content'
 class About extends PureComponent {
   render() {
     return (
-      <div className="profile--section">
+      <div className="profile--full">
         <h1 id="about">{this.props.data.markdownRemark.frontmatter.title}</h1>
+        <div className="profile--part">
         <PreviewCompatibleImage 
           imageInfo={this.props.data.markdownRemark.frontmatter.image}
         />
-        <div style={{ marginTop: '1rem' }}>
-          <HTMLContent content={this.props.data.markdownRemark.html} />
+        </div>
+        <div className="profile--part" style={{ padding: '0 15px ' }}>
+          <div style={{ marginTop: '1rem' }}>
+            <HTMLContent content={this.props.data.markdownRemark.html} />
+          </div>
         </div>
         
       </div>

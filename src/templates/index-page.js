@@ -5,7 +5,6 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import About from '../components/About';
-import Curriculum from '../components/Curriculum';
 
 export const IndexPageTemplate = () => '';
 
@@ -22,7 +21,6 @@ const Content = ({
         <BlogRoll />
         <div className="profile--block bottom-section">
           <About />
-          <Curriculum />
         </div>
       </div>
   </div>
