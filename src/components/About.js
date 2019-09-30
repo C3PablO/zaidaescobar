@@ -8,17 +8,18 @@ class About extends PureComponent {
     return (
       <div className="profile--full">
         <h1 id="about">{this.props.data.markdownRemark.frontmatter.title}</h1>
-        <div className="profile--part">
-        <PreviewCompatibleImage 
-          imageInfo={this.props.data.markdownRemark.frontmatter.image}
-        />
-        </div>
-        <div className="profile--part" style={{ padding: '0 15px ' }}>
-          <div style={{ marginTop: '1rem' }}>
-            <HTMLContent content={this.props.data.markdownRemark.html} />
+        <div className="profile--part-wrapper">
+          <div className="profile--part">
+          <PreviewCompatibleImage 
+            imageInfo={this.props.data.markdownRemark.frontmatter.image}
+          />
+          </div>
+          <div className="profile--part" style={{ padding: '0 15px ' }}>
+            <div style={{ marginTop: '1rem' }}>
+              <HTMLContent content={this.props.data.markdownRemark.html} />
+            </div>
           </div>
         </div>
-        
       </div>
     );
   }
