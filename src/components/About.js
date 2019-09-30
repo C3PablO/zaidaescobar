@@ -10,9 +10,11 @@ class About extends PureComponent {
         <h1 id="about">{this.props.data.markdownRemark.frontmatter.title}</h1>
         <div className="profile--part-wrapper">
           <div className="profile--part">
-          <PreviewCompatibleImage 
-            imageInfo={this.props.data.markdownRemark.frontmatter.image}
-          />
+          <div className="profile--part--image">
+            <PreviewCompatibleImage 
+              imageInfo={this.props.data.markdownRemark.frontmatter.image}
+            />
+          </div>
           </div>
           <div className="profile--part" style={{ padding: '0 15px ' }}>
             <div style={{ marginTop: '1rem' }}>
