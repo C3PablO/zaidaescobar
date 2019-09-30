@@ -16,10 +16,8 @@ class About extends PureComponent {
             />
           </div>
           </div>
-          <div className="profile--part" style={{ padding: '0 15px ' }}>
-            <div style={{ marginTop: '1rem' }}>
-              <HTMLContent content={this.props.data.markdownRemark.html} />
-            </div>
+          <div className="profile--part profile--part__last">
+            <HTMLContent content={this.props.data.markdownRemark.html} />
           </div>
         </div>
       </div>
