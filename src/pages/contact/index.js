@@ -100,7 +100,7 @@ export default class Index extends React.Component {
                 </div>
                 <div>
                   <button type="submit" className="page-contact--submit">
-                    Send
+                    Enviar
                   </button>
                 </div>
               </form>
