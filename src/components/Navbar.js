@@ -1,15 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
+import Hamburger from './Hamburger';
 import scrollToElement from 'scroll-to-element';
 
 const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: 'top-nav-links',
-    }
-  }
+  state = {}
 
   _handleLinkClick = (e, target) => {
     this._handleScroll(e, target);
@@ -29,38 +24,19 @@ const Navbar = class extends React.Component {
   } 
 
   toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'top-nav-links top-nav-links__active',
-            })
-          : this.setState({
-              navBarActiveClass: 'top-nav-links',
-            })
-      }
-    )
+    this.setState({ isOpen: !this.state.isOpen });
   }
 
   render() {
     return (
       <>
-      <div className={this.state.navBarActiveClass}>
+      <div className={this.state.isOpen ? 'top-nav-links top-nav-links__active' : 'top-nav-links'}>
         <div>
           <Link to="/#work" className="top-nav--link" onClick={this._handleLinkClick}>
             Obra
           </Link>
           <Link to="/#about" className="top-nav--link" onClick={this._handleLinkClick}>
             Sobre mi
-          </Link>
-          <Link to="/#cv" className="top-nav--link" onClick={this._handleLinkClick}>
-            Curriculum
           </Link>
           <Link to="/contact" className="top-nav--link" onClick={this._handleLinkClick}>
             Contacto
@@ -97,9 +73,11 @@ const Navbar = class extends React.Component {
           </Link>
         </div>
         <div className="top-nav--section">
-          <button className="top-nav--button" onClick={this.toggleHamburger}>
-            MENU
-          </button>
+          <div className="top-nav--button--wrapper">
+            <button className="top-nav--button" onClick={this.toggleHamburger}>
+              <Hamburger isOpen={this.state.isOpen} />
+            </button>
+          </div>
         </div>
       </nav>
     </>
