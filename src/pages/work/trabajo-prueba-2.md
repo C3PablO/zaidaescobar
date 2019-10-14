@@ -4,7 +4,7 @@ title: trabajo prueba 2
 date: 2019-09-07T23:59:49.858Z
 order: 6
 color: '#4a148c'
-image: /img/prueba2.png
+image: /img/prueba.png
 images:
   - image: /img/prueba2.png
 tags:
