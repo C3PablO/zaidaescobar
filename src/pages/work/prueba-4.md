@@ -6,10 +6,9 @@ order: 4
 color: '#000000'
 image: /img/estómago-i-pequeño.jpg
 images:
-  - image: /img/prueba4.png
-  - image: /img/huesosiv-pequeño.jpg
-  - image: /img/huesosiii-pequeño.jpg
-  - image: /img/corazóniipeq.jpg
+  - image: /img/huesos-iv.jpg
+  - image: /img/huesos-iii.jpg
+  - image: /img/corazón-ii.jpg
   - image: /img/ojos-ipeq.jpg
   - image: /img/corazóni-peq.jpg
   - image: /img/estómago-i-pequeño.jpg
