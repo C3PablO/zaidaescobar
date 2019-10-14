@@ -6,7 +6,6 @@ order: 3
 color: '#c62828'
 image: /img/monstruos10pek.jpg
 images:
-  - image: /img/prueba3.png
   - image: /img/monstruos7pek.jpg
   - image: /img/monstruos6pek.jpg
   - image: /img/monstruos1pek.jpg
