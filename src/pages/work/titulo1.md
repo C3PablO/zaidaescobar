@@ -3,7 +3,7 @@ templateKey: work-page
 title: Instinto
 date: 2019-09-07T23:52:32.226Z
 order: 3
-color: '#0097a7'
+color: '#c9514e'
 image: /img/detalle.jpg
 images:
   - image: /img/img_9899.jpg
