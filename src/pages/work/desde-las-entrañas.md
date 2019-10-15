@@ -7,13 +7,13 @@ color: '#5f6a4e'
 image: /img/dle2_2-min.jpg
 images:
   - image: /img/dle25c-min.jpg
-  - image: /img/dle8-min.jpg
   - image: /img/dle5-min.jpg
-  - image: /img/dle2_2-min.jpg
+  - image: /img/2.jpg
   - image: /img/dle6-min.jpg
   - image: /img/dle1-min.jpg
-  - image: /img/dle7-min.jpg
-  - image: /img/dle3-min.jpg
+  - image: /img/4.jpg
+  - image: /img/3.jpg
+  - image: /img/dle8-min.jpg
 tags:
   - editorial
   - ilustración
