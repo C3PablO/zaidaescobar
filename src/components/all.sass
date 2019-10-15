@@ -25,7 +25,7 @@ a
 
 
 .bottom-section
-  margin-top: 30px;
+  margin-bottom: 30px;
 
 .main-header
   text-align: center;
@@ -187,6 +187,7 @@ a
 
 // about me
 .profile--block
+  padding-top: 60px;
   display: flex;
 
 .profile--block ul
@@ -341,17 +342,17 @@ a
 
 // footer
 .footer
+  color: $background;
   background: $color;
   padding: 10px;
   text-align: center;
   margin-top: 50px;
 
+.footer p
+  margin-bottom: 10px;
+
 .footer a
   color: $background;
-  text-decoration: none;
-
-.footer a:hover
-  text-decoration: underline;
 
 .footer h2
   margin: 0;
@@ -361,11 +362,14 @@ a
 .page-contact
   animation-name: showup;
   animation-duration: 1s;
-  padding-top: 60px;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
+.contact-component
+  padding: 60px 0;
+  width: 100%;
 
   form
     margin: 0 auto;
@@ -388,10 +392,10 @@ a
   input:focus, textarea:focus
     border-bottom: 2px solid green;
 
-.page-contact--title
+.contact-component--title
   text-align: center;
 
-.page-contact--submit
+.contact-component--submit
   margin-top: 10px;
   background: $color;
   color: $background;

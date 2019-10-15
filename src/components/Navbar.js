@@ -38,7 +38,7 @@ const Navbar = class extends React.Component {
           <Link to="/#about" className="top-nav--link" onClick={this._handleLinkClick}>
             Sobre mi
           </Link>
-          <Link to="/contact" className="top-nav--link" onClick={this._handleLinkClick}>
+          <Link to="/#contact" className="top-nav--link" onClick={this._handleLinkClick}>
             Contacto
           </Link>
         </div>

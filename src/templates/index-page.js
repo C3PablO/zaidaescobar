@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import About from '../components/About';
+import Contact from '../components/Contact';
 
 export const IndexPageTemplate = () => '';
 
@@ -19,9 +20,13 @@ const Content = ({
           <h2>{subheading}</h2>
         </header>
         <BlogRoll />
-        <div className="profile--block bottom-section">
+        <div className="profile--block">
           <About />
         </div>
+        <div className="bottom-section">
+        <Contact />
+        </div>
+        
       </div>
   </div>
 )

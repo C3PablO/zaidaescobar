@@ -7,11 +7,10 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer">
-        <Link to="/contact" className="contact-link">
-        <h2>
-          Contacto
-        </h2>
-      </Link>
+        <p>© 2019 Zaida Escobar</p>
+        <p>
+          <a href="https://github.com/C3PablO" target="_blank">Desarrollado por C3Pablo</a>
+        </p>
       </footer>
     )
   }

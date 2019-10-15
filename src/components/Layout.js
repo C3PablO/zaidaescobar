@@ -6,7 +6,7 @@ import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from "gatsby"
 
-const TemplateWrapper = ({ children, showFooter }) => {
+const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -47,12 +47,9 @@ const TemplateWrapper = ({ children, showFooter }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-      {showFooter && <Footer />}
+      <Footer />
     </div>
   )
-}
-TemplateWrapper.defaultProps = {
-  showFooter: true,
 }
 
 export default TemplateWrapper
