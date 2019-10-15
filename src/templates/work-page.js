@@ -35,7 +35,7 @@ export const WorkPostTemplate = ({
           ))}
         </ul>
       ) : null}
-      <Masonry images={images} />
+      <Masonry images={images} cols={3} />
       <div className="bottom-section">
         <h1>Obra</h1>
         <BlogRoll />
