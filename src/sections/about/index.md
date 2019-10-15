@@ -3,7 +3,7 @@ templateKey: about-section
 title: Sobre mi
 image: /img/zaida.jpg
 ---
-## Que decir de mi
+## Que decir
 
 Licenciada en Bellas Artes en la Universidad Complutense de Madrid y Técnica Superior de Ilustración en la Escuela de Arte 10. He realizado numerosas exposiciones tanto colectivas como individuales especialmente en Madrid y Barcelona. Ganadora y finalista de diversos premios como el de Arte Intruso o el Certámen de Jóvenes creadores de Madrid. He colaborado con Naves Matadero, La Tabacalera o Save the Children. A día de hoy he publicado dos libros ilustrados "Desde las entrañas" y "Caminares".
 
