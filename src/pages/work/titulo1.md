@@ -6,9 +6,6 @@ order: 3
 color: '#0097a7'
 image: /img/detalle.jpg
 images:
-  - image: /img/blog-index.jpg
-  - image: /img/home-jumbotron.jpg
-  - image: /img/jumbotron.jpg
   - image: /img/img_9899.jpg
   - image: /img/3.jpg
   - image: /img/img_9896.jpg
