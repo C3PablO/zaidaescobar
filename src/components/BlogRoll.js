@@ -5,28 +5,30 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 import Masonry from './Masonry';
 
 const Item = ({ imageInfo }) => (
-  <article key={imageInfo.node.id} className="blog-pod">
-    <Link to={imageInfo.node.fields.slug}>
-      <div className="blog-pod--image">
-        <div className="blog-pod--title">
-          <h3>{imageInfo.node.frontmatter.title}</h3>
+  <article key={imageInfo.node.id} className="work-pod">
+    <div className="work-pod--content">
+      <Link to={imageInfo.node.fields.slug}>
+        <span
+          className="work-pod--image--overlay"
+          style={{ background: imageInfo.node.frontmatter.color }}
+        />
+        <div className="work-pod--image">
+          <div className="work-pod--title">
+            <h3>{imageInfo.node.frontmatter.title}</h3>
+          </div>
+          <div className="work-pod--image--wrapper">
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: imageInfo.node.frontmatter.image,
+                alt: `featured image thumbnail for post ${
+                  imageInfo.node.title
+                }`,
+              }}
+            />
+          </div>
         </div>
-        <div className="blog-pod--image--wrapper">
-          <span
-            className="blog-pod--image--overlay"
-            style={{ background: imageInfo.node.frontmatter.color }}
-          />
-          <PreviewCompatibleImage
-            imageInfo={{
-              image: imageInfo.node.frontmatter.image,
-              alt: `featured image thumbnail for post ${
-                imageInfo.node.title
-              }`,
-            }}
-          />
-        </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   </article>
 )
 class BlogRoll extends React.Component {

@@ -34,20 +34,40 @@ a
   margin: 0;
 
 // blog grid
-.blog-pod__3
-  width: 33.3%;
-
-.blog-pod a
-  display: block;
+.work-pod
   position: relative;
-
-.blog-pod--image
-  position: relative;
+  padding-top: 110%;
   overflow: hidden;
-  margin: 5px;
   border-radius: $border_radius;
 
-.blog-pod--image--overlay
+.grid-col:nth-child(odd) .work-pod:nth-child(odd)
+  padding-top: 120%;
+
+.grid-col:nth-child(even) .work-pod:nth-child(even)
+  padding-top: 120%;
+
+    
+
+
+.work-pod--content
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+
+.work-pod a
+  width: 100%;
+  display: block;
+  position: relative;
+  display: flex;
+
+.work-pod--image
+  width: 100%;
+  display: flex;
+
+.work-pod--image--overlay
   transition: transform 1000ms;
   border-radius: 50%;
   position: absolute;
@@ -61,11 +81,16 @@ a
   z-index: 1;
   opacity: 0;
 
-.blog-pod--image--wrapper
+.work-pod--image--wrapper
+  width: 100%;
+  height: 100%;
   transition: all 300ms;
   transform: scale(1, 1)
 
-.blog-pod--title
+.work-pod--image--wrapper > div
+  height: 100%;
+
+.work-pod--title
   transition: all 300ms;
   position: absolute
   width: 100%;
@@ -82,16 +107,20 @@ a
   text-align: center;
 
 //blog pod hover
-.blog-pod--image:hover .blog-pod--image--overlay
+.work-pod--content a:hover .work-pod--image--overlay,
+.work-pod--content a:focus .work-pod--image--overlay
   transform: scale(30);
-  opacity: .9;
+  opacity: 1;
 
-.blog-pod--image:hover .blog-pod--image--wrapper
+.work-pod--content a:hover .work-pod--image--wrapper,
+.work-pod--content a:focus .work-pod--image--wrapper
   transform: scale(1.5, 1.5)
 
-.blog-pod--image:hover .blog-pod--title
+.work-pod--content a:hover .work-pod--title,
+.work-pod--content a:focus .work-pod--title
   transform: translateY(0px)
   opacity: .8;
+
 
 // index page
 .index-page
@@ -431,7 +460,7 @@ a
   h4
     font-size: 21px;
   
-  .blog-pod--title h3
+  .work-pod--title h3
     font-size: 15px;
 
 // small screen
@@ -441,7 +470,7 @@ a
     max-width: 400px;
     margin: 0 auto;
 
-  .blog-pod--title h3
+  .work-pod--title h3
     font-size: 20px;
 
 
