@@ -21,6 +21,8 @@ a
     opacity: 1;
     transform: translateY(0px);
 
+// image show up
+
 
 .bottom-section
   margin-top: 30px;
@@ -82,7 +84,7 @@ a
 //blog pod hover
 .blog-pod--image:hover .blog-pod--image--overlay
   transform: scale(30);
-  opacity: 1;
+  opacity: .9;
 
 .blog-pod--image:hover .blog-pod--image--wrapper
   transform: scale(1.5, 1.5)
@@ -374,6 +376,22 @@ a
   display: flex;
   align-items: center;
   justify-content: center;
+
+.sections-list
+  text-align: center;
+
+.sections-list ul
+  list-style: none;
+
+.sections-list .tag-list li a
+  text-decoration: none;
+  color: $color;
+  font-size: 20px;
+
+.sections-list .tag-list li a:hover
+  text-decoration: underline;
+  color: red;
+
 
 
 // small screen
