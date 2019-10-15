@@ -9,15 +9,19 @@ class About extends PureComponent {
       <div className="profile--full">
         <h1 id="about">{this.props.data.markdownRemark.frontmatter.title}</h1>
         <div className="profile--part-wrapper">
-          <div className="profile--part">
-          <div className="profile--part--image">
-            <PreviewCompatibleImage 
-              imageInfo={this.props.data.markdownRemark.frontmatter.image}
-            />
-          </div>
-          </div>
           <div className="profile--part profile--part__last">
             <HTMLContent content={this.props.data.markdownRemark.html} />
+          </div>
+          <div className="profile--part">
+            <div className="profile--part--image">
+              <div className="profile--part--image--circle-wrapper">
+                <div className="profile--part--image--circle">
+                  <PreviewCompatibleImage 
+                    imageInfo={this.props.data.markdownRemark.frontmatter.image}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

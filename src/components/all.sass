@@ -165,14 +165,15 @@ a
   padding: 15px 20px;
 
 .profile--part-wrapper
+  padding-top: 15px;
   display: flex;
 
 .profile--part
   position: relative;
-  width: 50%;
+  width: 40%;
 
 .profile--part__last
-  padding: 0 15px;
+  width: 60%;
 
 .profile--part--image
   position: absolute;
@@ -182,6 +183,24 @@ a
   height: 100%;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+.profile--part--image--circle-wrapper
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  height: 0px;
+  width: 75%;
+  padding-top: 75%;
+
+.profile--part--image--circle
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
 
 // top nav
@@ -355,12 +374,20 @@ a
 
 
 // small screen
+@media screen and (max-width: 1300px)
+  .profile--part--image
+    justify-content: center;
+
 @media screen and (max-width: 900px)
   .profile--block
     display: block;
 
   .profile--part-wrapper
     display: block;
+
+  .profile--part--image--circle-wrapper
+    width: 50%;
+    padding-top: 50%;
 
   .profile--part
      width: 100%;
@@ -715,3 +742,8 @@ $scale: 1;
     width: 0;
     left: 36px;
   
+
+
+.profile--part--image--circle img
+  z-index: 100;
+  -webkit-filter: grayscale(70%); /* Safari */
