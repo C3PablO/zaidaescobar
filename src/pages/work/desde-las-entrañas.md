@@ -3,7 +3,7 @@ templateKey: work-page
 title: Desde las entrañas
 date: 2019-09-07T15:55:10.268Z
 order: 2
-color: '#33cc66'
+color: '#5f6a4e'
 image: /img/dle2_2-min.jpg
 images:
   - image: /img/dle25c-min.jpg
