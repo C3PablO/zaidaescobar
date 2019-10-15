@@ -14,7 +14,6 @@ images:
   - image: /img/caminares6-min.jpg
   - image: /img/caminares8-min.jpg
   - image: /img/caminares9-min.jpg
-  - image: /img/caminares10-min.jpg
   - image: /img/caminares12-min.jpg
 tags:
   - editorial
