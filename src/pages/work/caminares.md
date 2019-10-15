@@ -3,8 +3,8 @@ templateKey: work-page
 title: Caminares
 date: 2019-09-29T19:09:39.751Z
 order: 1
-color: '#dea02f'
-image: /img/9es.jpg
+color: '#3b8da3'
+image: /img/caminares-8-crop.jpg
 images:
   - image: /img/caminares0-min.jpg
   - image: /img/1.jpg
