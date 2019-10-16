@@ -4,15 +4,15 @@ title: Caminares
 date: 2019-09-29T19:09:39.751Z
 order: 1
 color: '#3b8da3'
-image: /img/caminares-8-crop.jpg
+image: /img/9c.jpg
 images:
   - image: /img/caminares0-min.jpg
   - image: /img/1.jpg
   - image: /img/caminares4-min.jpg
-  - image: /img/14.jpg
+  - image: /img/14c.jpg
   - image: /img/caminares5-min.jpg
   - image: /img/caminares6-min.jpg
-  - image: /img/caminares8-min.jpg
+  - image: /img/caminares-8-crop.jpg
   - image: /img/caminares9-min.jpg
   - image: /img/caminares12-min.jpg
 tags:
