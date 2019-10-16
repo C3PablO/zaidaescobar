@@ -7,11 +7,11 @@ color: '#6b8d41'
 image: /img/estómago-i-pequeño.jpg
 images:
   - image: /img/huesos-iv.jpg
+  - image: /img/corazón-ii.jpg
   - image: /img/huesos-iii.jpg
-  - image: /img/corazón-ii.jpg
   - image: /img/ojos-ipeq.jpg
-  - image: /img/corazóni-peq.jpg
   - image: /img/estómago-i-pequeño.jpg
+  - image: /img/corazóni-peq.jpg
 tags:
   - proyecto
   - exposición
