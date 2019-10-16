@@ -4,7 +4,7 @@ title: Desde las entrañas II
 date: 2019-09-08T00:46:54.356Z
 order: 4
 color: '#6b8d41'
-image: /img/estómago-i-pequeño.jpg
+image: /img/huesos-iiiprueba.jpg
 images:
   - image: /img/huesos-iv.jpg
   - image: /img/corazón-ii.jpg
