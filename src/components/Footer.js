@@ -9,7 +9,7 @@ const Footer = class extends React.Component {
       <footer className="footer">
         <p>© 2019 Zaida Escobar</p>
         <p>
-          <a href="https://github.com/C3PablO" target="_blank">Desarrollado por C3Pablo</a>
+          <a href="https://github.com/C3PablO" target="_blank">Desarrollo y diseño web por C3Pablo</a>
         </p>
       </footer>
     )
