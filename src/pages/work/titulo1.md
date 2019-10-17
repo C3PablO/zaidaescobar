@@ -6,7 +6,7 @@ order: 3
 color: '#39406c'
 image: /img/detalle.jpg
 images:
-  - image: /img/img_9899.jpg
+  - image: /img/opcion2.jpg
   - image: /img/img_9896.jpg
   - image: /img/14m.jpg
   - image: /img/img_9884.jpg
