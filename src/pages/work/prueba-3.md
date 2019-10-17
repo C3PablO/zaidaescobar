@@ -1,7 +1,7 @@
 ---
 templateKey: work-page
 title: Monstruo de dos cabezas
-date: 2019-09-08T00:06:22.666Z
+date: 2019-09-05T00:06:00.000Z
 order: 3
 color: '#fb4d4e'
 image: /img/monstruos10pek.jpg
