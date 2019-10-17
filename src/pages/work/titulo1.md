@@ -8,7 +8,6 @@ image: /img/detalle.jpg
 images:
   - image: /img/img_9899.jpg
   - image: /img/img_9896.jpg
-  - image: /img/3.jpg
   - image: /img/14m.jpg
   - image: /img/img_9884.jpg
   - image: /img/img_20180623_195316.jpg
