@@ -10,8 +10,8 @@ images:
   - image: /img/dle5-min.jpg
   - image: /img/2.jpg
   - image: /img/dle6-min.jpg
-  - image: /img/dle1-min.jpg
   - image: /img/7e.jpg
+  - image: /img/dle1-min.jpg
   - image: /img/4e.jpg
   - image: /img/dle8-min.jpg
   - image: /img/3.jpg
