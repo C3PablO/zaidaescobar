@@ -71,6 +71,12 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: `gatsby-plugin-layout`,
+            options: {
+              component: require.resolve(`./src/components/Layout.js`),
+            },
+          },
         ],
       },
     },
