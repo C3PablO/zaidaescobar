@@ -25,15 +25,20 @@ export const WorkPostTemplate = ({
         </h1>
         <PostContent content={content} />
       </div>
-      {tags && tags.length ? (
-        <ul className="tags">
-          {tags.map(tag => (
-            <li key={tag + `tag`} className="tags--tag">
-              {tag}
-            </li>
-          ))}
-        </ul>
-      ) : null}
+      {
+        tags && tags.length && (
+          <div className="categories">
+            Categoría:
+            <ul className="tags">
+              {tags.map((tag, i) => (
+                <li key={tag + `tag`} className="tags--tag">
+                  {tag}{tags.length - 1 !== i && ','}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
       <Masonry images={images} cols={3} />
       <div className="bottom-section" style={{ marginTop: 50 }}>
         <h1>Obra</h1>
