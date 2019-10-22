@@ -13,8 +13,8 @@ images:
   - image: /img/7e.jpg
   - image: /img/dle1-min.jpg
   - image: /img/3.jpg
-  - image: /img/dle8-min.jpg
   - image: /img/4e.jpg
+  - image: /img/dle8-min.jpg
 tags:
   - editorial
   - ilustración
