@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import About from '../components/About';
 import Contact from '../components/Contact';

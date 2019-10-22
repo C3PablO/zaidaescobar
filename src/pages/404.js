@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout'
 
 const NotFoundPage = () => (
   <div style={{ marginTop: 100, textAlign: 'center' }}>
