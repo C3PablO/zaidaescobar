@@ -36,11 +36,9 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <div className="page-contact">
-          <Contact />
-        </div>
-      </Layout>
-    )
+      <div className="page-contact">
+        <Contact />
+      </div>
+    );
   }
 }

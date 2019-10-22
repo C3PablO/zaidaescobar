@@ -12,16 +12,14 @@ const TagsPage = ({
     },
   },
 }) => (
-  <Layout>
-    <div className="index-page sections-list">
-      <Helmet title={`Obra | ${title}`} />
-      <div className="index-page--wrapper">
-        <header className="main-header">
-        </header>
-        <Tags />
-      </div>
+  <div className="index-page sections-list">
+    <Helmet title={`Obra | ${title}`} />
+    <div className="index-page--wrapper">
+      <header className="main-header">
+      </header>
+      <Tags />
     </div>
-  </Layout>
+  </div>
 )
 
 export default TagsPage

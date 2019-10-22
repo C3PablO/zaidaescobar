@@ -59,25 +59,23 @@ const Work = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
-      <WorkPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        images={post.frontmatter.images}
-        helmet={
-          <Helmet title={post.frontmatter.title}>
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
-    </Layout>
+    <WorkPostTemplate
+      content={post.html}
+      contentComponent={HTMLContent}
+      description={post.frontmatter.description}
+      images={post.frontmatter.images}
+      helmet={
+        <Helmet title={post.frontmatter.title}>
+          <title>{`${post.frontmatter.title}`}</title>
+          <meta
+            name="description"
+            content={`${post.frontmatter.description}`}
+          />
+        </Helmet>
+      }
+      tags={post.frontmatter.tags}
+      title={post.frontmatter.title}
+    />
   )
 }
 
