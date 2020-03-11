@@ -12,7 +12,6 @@ images:
   - image: /img/img_9884.jpg
   - image: /img/img_20180623_195316.jpg
   - image: /img/img_9875m.jpg
-  - image: /img/panorámica-instinto.jpg
 tags:
   - mural
   - intervención artística
