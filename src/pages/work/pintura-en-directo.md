@@ -4,7 +4,7 @@ title: PINTURA EN DIRECTO
 date: 2020-03-11T12:10:39.320Z
 order: 6
 color: '#ae7cb1'
-image: /img/577667_10200935323371231_2013705340_n.jpg
+image: /img/_mg_8370_lr.jpg
 images:
   - image: /img/_mg_8363_lr.jpg
   - image: /img/_mg_8331_lr.jpg
@@ -13,7 +13,6 @@ images:
   - image: /img/img_20180323_221640.jpg
   - image: /img/img-20180615-wa0008.jpg
   - image: /img/60335551_1162131470613601_693972960192495616_o.jpg
-  - image: /img/61152874_2078746108891293_7747044352467140608_n.jpg
 tags:
   - pintura en directo
   - live painting
