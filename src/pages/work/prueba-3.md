@@ -14,6 +14,7 @@ images:
   - image: /img/monstruos10pek.jpg
   - image: /img/monstruos3pp.jpg
   - image: /img/monstruos2pp.jpg
+  - image: /img/monstruo-de-dos.jpg
 tags:
   - cuaderno de artista
   - dibujos
