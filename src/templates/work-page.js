@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
 import Masonry from '../components/Masonry'
 import BlogRoll from '../components/BlogRoll'
+import WorkNav from '../components/WorkNav'
 
 export const WorkPostTemplate = ({
   content,
@@ -14,6 +15,7 @@ export const WorkPostTemplate = ({
   title,
   images,
   helmet,
+  slug,
 }) => {
   const PostContent = contentComponent || Content
   return (
@@ -41,7 +43,7 @@ export const WorkPostTemplate = ({
       }
       <Masonry images={images} cols={3} />
       <div className="bottom-section" style={{ marginTop: 50 }}>
-        <h1>Obra</h1>
+        <WorkNav current={slug} />
         <BlogRoll />
       </div>
     </div>
@@ -61,9 +63,9 @@ WorkPostTemplate.propTypes = {
 
 const Work = ({ data }) => {
   const { markdownRemark: post } = data
-
   return (
     <WorkPostTemplate
+      slug={post.fields.slug}
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
@@ -96,6 +98,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
