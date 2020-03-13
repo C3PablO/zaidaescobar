@@ -6,18 +6,6 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - label: "Secciones"
-    name: "sections"
-    files:
-      - file: "src/sections/about/index.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-section"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: Image, name: image, widget: image}
-
   - name: "work"
     label: "Trabajos"
     folder: "src/pages/work"
@@ -33,9 +21,21 @@ collections:
       - {label: Texto, name: body, widget: markdown }
       - {label: Imagenes, name: images, widget: list, fields: [{label: Image, name: image, widget: image}]}
       - {label: "Tags", name: "tags", widget: "list"}
+  
+  - label: "Secciones"
+    name: "sections"
+    files:
+      - file: "src/sections/about/index.md"
+        label: "Sobre mi"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-section"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: Image, name: image, widget: image}
 
   - name: "pages"
-    label: "Pages"
+    label: "Detalles"
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"
