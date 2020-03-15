@@ -4,11 +4,38 @@ import ReactDOM from 'react-dom';
 import { navigate } from "gatsby"
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import PreviewCompatibleImage from './PreviewCompatibleImage';
+import scrollToElement from 'scroll-to-element';
 import Masonry from './Masonry';
 
 class Item extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
   state = { active: false }
+
+  onClick(e) {
+    if (e.currentTarget.href !== window.location.href) {
+      const href = e.currentTarget.href;
+      e.preventDefault();
+      e.stopPropagation();
+      this.setState({ active: true}, () => {
+        const t = window.setTimeout(() => {
+          window.clearTimeout(t);
+          navigate(href.replace(window.location.origin, ''));
+
+        }, 700)
+      });
+    } else {
+      return scrollToElement(document.getElementById('blog-title'), {
+        offset: -100,
+        duration: 1000,
+      });
+    };
+  }
+
   render() {
     const { imageInfo } = this.props;
     const { active } = this.state;
@@ -19,18 +46,7 @@ class Item extends PureComponent {
         className={classNames('work-pod', active ?'work-pod__active' : undefined)}
       >
         <div className="work-pod--content">
-          <Link to={imageInfo.node.fields.slug} onClick={(e) => {
-            const href = e.currentTarget.href;
-            e.preventDefault();
-            e.stopPropagation();
-            this.setState({ active: true}, () => {
-              const t = window.setTimeout(() => {
-                window.clearTimeout(t);
-                navigate(href.replace(window.location.origin, ''));
-  
-              }, 700)
-            });
-          }}>
+          <Link to={imageInfo.node.fields.slug} onClick={this.onClick}>
             <span
               className="work-pod--image--overlay"
               style={{ background: imageInfo.node.frontmatter.color }}

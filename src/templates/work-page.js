@@ -21,7 +21,7 @@ export const WorkPostTemplate = ({
   return (
     <div className="blog-page--wrapper">
       {helmet}
-      <div className="blog-page--text blog-page--title">
+      <div className="blog-page--text blog-page--title" id="blog-title">
         <h1>
           {title}
         </h1>
