@@ -1,37 +1,70 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
+import classNames from 'classnames';
+import ReactDOM from 'react-dom';
+import { navigate } from "gatsby"
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import Masonry from './Masonry';
 
-const Item = ({ imageInfo }) => (
-  <article key={imageInfo.node.id} className="work-pod">
-    <div className="work-pod--content">
-      <Link to={imageInfo.node.fields.slug}>
-        <span
-          className="work-pod--image--overlay"
-          style={{ background: imageInfo.node.frontmatter.color }}
-        />
-        <div className="work-pod--image">
-          <div className="work-pod--title">
-            <h3>{imageInfo.node.frontmatter.title}</h3>
-          </div>
-          <div className="work-pod--image--wrapper">
-            <PreviewCompatibleImage
-              imageInfo={{
-                image: imageInfo.node.frontmatter.image,
-                alt: `featured image thumbnail for post ${
-                  imageInfo.node.title
-                }`,
-              }}
+class Item extends PureComponent {
+  state = { active: false }
+  render() {
+    const { imageInfo } = this.props;
+    const { active } = this.state;
+    return (
+      <>
+      <article
+        key={imageInfo.node.id}
+        className={classNames('work-pod', active ?'work-pod__active' : undefined)}
+      >
+        <div className="work-pod--content">
+          <Link to={imageInfo.node.fields.slug} onClick={(e) => {
+            const href = e.currentTarget.href;
+            e.preventDefault();
+            e.stopPropagation();
+            this.setState({ active: true}, () => {
+              const t = window.setTimeout(() => {
+                window.clearTimeout(t);
+                navigate(href.replace(window.location.origin, ''));
+  
+              }, 700)
+            });
+          }}>
+            <span
+              className="work-pod--image--overlay"
+              style={{ background: imageInfo.node.frontmatter.color }}
             />
-          </div>
+            <div className="work-pod--image">
+              <div className="work-pod--title">
+                <h3>{imageInfo.node.frontmatter.title}</h3>
+              </div>
+              <div className="work-pod--image--wrapper">
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: imageInfo.node.frontmatter.image,
+                    alt: `featured image thumbnail for post ${
+                      imageInfo.node.title
+                    }`,
+                  }}
+                />
+              </div>
+            </div>
+          </Link>
         </div>
-      </Link>
-    </div>
-  </article>
-)
-class BlogRoll extends React.Component {
+        {this.state.color !== undefined
+          && ReactDOM.createPortal(
+            <div className="veil--content" style={{ background: this.state.color }} />,
+            document.getElementById("veil")
+          )
+        }
+      </article>
+      { active && <div className="veil" />}
+      </>
+    )
+  }
+}
+class BlogRoll extends React.PureComponent {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -39,6 +72,7 @@ class BlogRoll extends React.Component {
     return (
       <div className="columns is-multiline">
         <Masonry images={posts} cols={3} renderer={Item} />
+        <div id="veil" />
       </div>
     )
   }  
