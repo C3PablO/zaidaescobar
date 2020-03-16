@@ -454,10 +454,10 @@ a
 
 .work-pod.work-pod__active
   z-index: 101;
-  animation-name: hideup;
+  animation-name: hidescale;
   animation-duration: .8s;
 
-@keyframes hideup
+@keyframes hidescale
   0%
     transform: scale(1);
   40%
@@ -469,6 +469,19 @@ a
     opacity: 0;
   100%
     opacity: 0;
+
+@keyframes hideup
+  0%
+    transform: translateY(0px);
+  60%
+    transform: translateY(-50px);
+    opacity: 1;
+  90%
+    transform: translateY(-50px);
+    opacity: 0;
+  100%
+    opacity: 0;
+
 
 @keyframes veil
   from
@@ -483,6 +496,10 @@ a
     justify-content: center;
 
 @media screen and (max-width: 900px)
+  .work-pod.work-pod__active
+    animation-name: hideup;
+    animation-duration: .8s;
+
   .profile--block
     display: block;
 
