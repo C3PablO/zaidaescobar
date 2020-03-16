@@ -1,3 +1,4 @@
+require('./node_modules/react-image-lightbox/style.css');
 const scrollToElement = require('scroll-to-element');
 
 exports.onClientEntry = (a, b) => {

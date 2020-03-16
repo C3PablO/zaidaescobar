@@ -1,7 +1,7 @@
 import React from 'react'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-const Masonry = ({ cols = 2, images, renderer }) => {
+const Masonry = ({ cols = 2, images, renderer, onClick }) => {
 const columns = createColumns(images, cols);
 const Image = renderer || PreviewCompatibleImage;
  return (
@@ -10,8 +10,12 @@ const Image = renderer || PreviewCompatibleImage;
       {columns.map((column, c) => (
         <div className="grid-col" key={c}>
           {column.map((image, i) => (
-            <div className="grid-item" key={i}>
-              <Image imageInfo={image} key={i} />
+            <div className="grid-item" key={i} onClick={() => {
+              if (onClick) {
+                onClick(image.index);
+              }
+            }}>
+              <Image imageInfo={image.item} key={i} />
             </div>
           ))}
         </div>
@@ -27,7 +31,7 @@ const createColumns = (array = [], chunk = 2) => {
     arrayColumns.push([]);
   }
   array.forEach((item, i) => {
-    arrayColumns[i % arrayColumns.length].push(item)
+    arrayColumns[i % arrayColumns.length].push({ item, index: i})
   });
 
   return arrayColumns;
