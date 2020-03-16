@@ -13,6 +13,7 @@ images:
   - image: /img/img_20180323_221640.jpg
   - image: /img/img-20180615-wa0008.jpg
   - image: /img/60335551_1162131470613601_693972960192495616_o.jpg
+  - image: /img/42889920_1763568967075677_366164584962195456_o-min.jpg
   - image: /img/_mg_7292.jpg
   - image: /img/oboedescereiii.jpg
   - image: /img/oboedescere-iv.jpg
