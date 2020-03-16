@@ -78,12 +78,6 @@ WorkPostTemplate.propTypes = {
 
 const Work = ({ data }) => {
   const { markdownRemark: post } = data;
-  const gallery = post.frontmatter.gallery.map(n => {
-    if (n.image) {
-      return n.image.childImageSharp.fluid.src;
-    }
-    return null;
-  }).filter(n => n !== null);
   return (
     <WorkPostTemplate
       id={post.id}  
@@ -92,7 +86,7 @@ const Work = ({ data }) => {
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
       images={post.frontmatter.images}
-      gallery={gallery}
+      gallery={post.frontmatter.gallery.map(n => n.image.childImageSharp.fluid.src)}
       helmet={
         <Helmet title={post.frontmatter.title}>
           <title>{`${post.frontmatter.title}`}</title>

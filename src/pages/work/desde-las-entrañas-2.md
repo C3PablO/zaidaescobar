@@ -7,11 +7,11 @@ color: '#6b8d41'
 image: /img/huesos-iiiprueba.jpg
 images:
   - image: /img/huesos-iv.jpg
-  - image: /img/corazón-ii.jpg
+  - image: /img/corazon-ii.jpg
   - image: /img/huesos-iii.jpg
   - image: /img/ojos-ipeq.jpg
-  - image: /img/estómago-i-pequeño.jpg
-  - image: /img/corazóni-peq.jpg
+  - image: /img/estomago-i-pequeno.jpg
+  - image: /img/corazoni-peq.jpg
 tags:
   - proyecto
   - exposición
