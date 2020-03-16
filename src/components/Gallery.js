@@ -47,7 +47,7 @@ export default class Gallery extends React.PureComponent {
     if (this.state.isOpen) {
       lightbox = (
         <Lightbox
-          wrapperClassName="helloworld"
+          imagePadding={50}
           mainSrc={images[this.state.index]}
           nextSrc={images[(this.state.index + 1) % images.length]}
           prevSrc={
