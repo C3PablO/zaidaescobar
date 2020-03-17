@@ -4,7 +4,7 @@ title: Instinto
 date: 2019-09-07T23:52:32.226Z
 order: 3
 color: '#39406c'
-image: /img/detalle.jpg
+image: /img/detalle_instinto.jpg
 images:
   - image: /img/opcion2.jpg
   - image: /img/img_9896.jpg
