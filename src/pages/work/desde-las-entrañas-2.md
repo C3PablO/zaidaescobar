@@ -10,8 +10,8 @@ images:
   - image: /img/corazon-ii.jpg
   - image: /img/huesos-iii.jpg
   - image: /img/ojos-ipeq.jpg
-  - image: /img/estomago-i-pequeno.jpg
   - image: /img/corazoni-peq.jpg
+  - image: /img/estomago-i-pequeno.jpg
 tags:
   - proyecto
   - exposición
