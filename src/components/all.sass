@@ -1,6 +1,8 @@
 $border_radius: 5px;
 $color: #312f40;
 $background: #fefffb;
+$frame_size_big: 1300px;
+$frame_size_small: 1100px;
 
 body
   background: $background;
@@ -122,10 +124,9 @@ a
   transform: translateY(0px)
   opacity: 1;
 
-
 // index page
 .index-page
-  max-width: 1300px;
+  max-width: $frame_size_big;
   margin: 0 auto
   padding-top: 90px;
 
@@ -136,7 +137,7 @@ a
 
 // blog page
 .blog-page--wrapper
-  max-width: 1300px;
+  max-width: $frame_size_big;
   padding: 10px;
   margin: 0 auto;
   animation-name: showup;
@@ -491,7 +492,11 @@ a
 
   
 // small screen
-@media screen and (max-width: 1300px)
+@media screen and (max-width: 1350px)
+  .index-page, .blog-page--wrapper
+    max-width: $frame_size_small;
+
+@media screen and (max-width: $frame_size_big)
   .profile--part--image
     justify-content: center;
 
