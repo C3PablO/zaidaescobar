@@ -6,15 +6,16 @@ order: 1
 color: '#3b8da3'
 image: /img/9c.jpg
 images:
-  - image: /img/caminares0-min.jpg
-  - image: /img/14c.jpg
-  - image: /img/caminares4-min.jpg
-  - image: /img/caminares6-min.jpg
-  - image: /img/1.jpg
-  - image: /img/caminares5-min.jpg
-  - image: /img/caminares9-min.jpg
-  - image: /img/caminares12-min.jpg
-  - image: /img/caminares-8-crop.jpg
+  - image: /img/caminares003.jpg
+  - image: /img/caminares008.jpg
+  - image: /img/caminares004.jpg
+  - image: /img/caminares009.jpg
+  - image: /img/caminares001.jpg
+  - image: /img/caminares006.jpg
+  - image: /img/caminares007.jpg
+  - image: /img/caminares005.jpg
+  - image: /img/caminares002.jpg
+  
 tags:
   - editorial
   - ilustración

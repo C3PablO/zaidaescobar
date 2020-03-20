@@ -6,12 +6,13 @@ order: 3
 color: '#39406c'
 image: /img/detalle_instinto.jpg
 images:
-  - image: /img/opcion2.jpg
-  - image: /img/img_9896.jpg
-  - image: /img/14m.jpg
-  - image: /img/img_9884.jpg
-  - image: /img/img_20180623_195316.jpg
-  - image: /img/img_9875m.jpg
+  - image: /img/instinto0000.jpg
+  - image: /img/instinto0001.jpg
+  - image: /img/instinto0003.jpg
+  - image: /img/instinto0004.jpg
+  - image: /img/instinto0005.jpg
+  - image: /img/instinto0006.jpg
+  
 tags:
   - mural
   - intervención artística

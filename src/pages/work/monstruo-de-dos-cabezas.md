@@ -6,17 +6,16 @@ order: 3
 color: '#fb4d4e'
 image: /img/detalle_monstruos.jpg
 images:
-  - image: /img/monstruos7pek.jpg
-  - image: /img/monstruos6pek.jpg
-  - image: /img/monstruos9pek.jpg
+  - image: /img/monstruo001.jpg
+  - image: /img/monstruo002.jpg
+  - image: /img/monstruo003.jpg
+  - image: /img/monstruo004.jpg
+  - image: /img/monstruo005.jpg
+  - image: /img/monstruo006.jpg
+  - image: /img/monstruo008.jpg
+  - image: /img/monstruo007.jpg
+  - image: /img/monstruo009.jpg
 
-  - image: /img/monstruos3pp.jpg
-  - image: /img/monstruos2pp.jpg
-  - image: /img/monstruos11pek.jpg
-
-  - image: /img/monstruo-de-dos.jpg
-  - image: /img/monstruos1pek.jpg
-  - image: /img/detalle_monstruos.jpg
 tags:
   - cuaderno de artista
   - dibujos

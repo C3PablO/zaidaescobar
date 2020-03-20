@@ -13,7 +13,7 @@ export class WorkPostTemplate extends React.PureComponent {
   state = {}
 
   gallery = React.createRef();
-
+  
   render() {
     const {
       content,
@@ -56,7 +56,7 @@ export class WorkPostTemplate extends React.PureComponent {
         <Masonry images={images} cols={3} onClick={(index) => {
           this.gallery.current.openLightbox(index);
         }} />
-        <div className="bottom-section" style={{ marginTop: 50 }}>
+        <div className="bottom-section" style={{ marginTop: 30 }}>
           <WorkNav current={slug} />
           <BlogRoll />
         </div>
