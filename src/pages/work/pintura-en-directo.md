@@ -3,7 +3,7 @@ templateKey: work-page
 title: Pintura en directo
 date: 2020-03-11T12:10:39.320Z
 order: 6
-color: '#c7a962'
+color: '#3d5f99'
 image: /img/livepainting005.jpg
 images:
   - image: /img/livepainting001.jpg
