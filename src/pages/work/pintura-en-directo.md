@@ -13,9 +13,11 @@ images:
   - image: /img/livepainting006.jpg
   - image: /img/livepainting007.jpg
   - image: /img/livepainting009.jpg
-  - image: /img/oboedescereiii.jpg
+  - image: /img/42889920_1763568967075677_366164584962195456_o-min.jpg
+  - image: /img/cenaafacuadro-01_opt.jpg
+  - image: /img/livepainting012.jpg
   - image: /img/livepainting011.jpg
-  - image: /img/oboedescere-iv.jpg
+  - image: /img/livepainting010.jpg
 tags:
   - pintura en directo
   - live painting
