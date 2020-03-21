@@ -15,9 +15,9 @@ images:
   - image: /img/livepainting007.jpg
   - image: /img/livepainting008.jpg
   - image: /img/livepainting009.jpg
-  - image: /img/livepainting010.jpg
   - image: /img/livepainting011.jpg
   - image: /img/livepainting012.jpg
+  - image: /img/livepainting010.jpg
 tags:
   - pintura en directo
   - live painting
