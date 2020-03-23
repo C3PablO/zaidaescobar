@@ -22,6 +22,7 @@ class Item extends PureComponent {
       e.preventDefault();
       e.stopPropagation();
       this.setState({ active: true}, () => {
+        // leave time for the animation before navigating
         const t = window.setTimeout(() => {
           window.clearTimeout(t);
           navigate(href.replace(window.location.origin, ''));
@@ -29,8 +30,8 @@ class Item extends PureComponent {
         }, 700)
       });
     } else {
+      // if the clicked element points to the same page the go to the top
       return scrollToElement(document.getElementById('blog-title'), {
-        offset: -100,
         duration: 1000,
       });
     };

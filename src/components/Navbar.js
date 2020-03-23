@@ -1,30 +1,18 @@
 import React from 'react'
 import { Link } from 'gatsby';
 import Hamburger from './Hamburger';
-import scrollToElement from 'scroll-to-element';
 
 const Navbar = class extends React.Component {
   state = {}
 
-  _handleLinkClick = (e, target) => {
-    this._handleScroll(e, target);
-    this.toggleHamburger();
-  }
-
-  _handleScroll = (e, targe) => {
-    if (typeof window !== undefined) {
-      const anchor = e.nativeEvent.target.href.split('/#')[1];
-      if (anchor) {
-        return scrollToElement(document.getElementById(anchor), {
-          offset: -100,
-          duration: 1000,
-        });
-      }
-    }
-  } 
-
   toggleHamburger = () => {
     this.setState({ isOpen: !this.state.isOpen });
+  }
+
+  clickLogo = () => {
+    if (this.state.isOpen) {
+      this.toggleHamburger();
+    }
   }
 
   render() {
@@ -32,13 +20,28 @@ const Navbar = class extends React.Component {
       <div>
         <div className={this.state.isOpen ? 'top-nav-links top-nav-links__active' : 'top-nav-links'}>
           <div>
-            <Link to="/#work" className="top-nav--link" onClick={this._handleLinkClick}>
+            <Link
+              to="/#work"
+              className="top-nav--link"
+              onClick={this.toggleHamburger}
+              data-scroll="work"
+            >
               Obra
             </Link>
-            <Link to="/#about" className="top-nav--link" onClick={this._handleLinkClick}>
+            <Link
+              to="/#about"
+              className="top-nav--link"
+              onClick={this.toggleHamburger}
+              data-scroll="about"
+            >
               Sobre mi
             </Link>
-            <Link to="/#contact" className="top-nav--link" onClick={this._handleLinkClick}>
+            <Link
+              to="/#contact"
+              className="top-nav--link"
+              onClick={this.toggleHamburger}
+              data-scroll="contact"
+            >
               Contacto
             </Link>
           </div>
@@ -58,7 +61,13 @@ const Navbar = class extends React.Component {
             </a>
           </div>
           <div className="top-nav--section">
-            <Link to="/#work" title="Logo" className="logo" onClick={this._handleScroll}>
+            <Link
+              to="/#work"
+              title="Logo"
+              className="logo"
+              onClick={this.clickLogo}
+              data-scroll="work"
+            >
               ZE
             </Link>
           </div>
