@@ -1,6 +1,7 @@
 backend:
-  name: github
+  name: git-gateway
   repo: C3PablO/zaidaescobar
+  branch: master
 
 media_folder: static/img
 public_folder: /img
