@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: C3PablO/gatsby-starter-netlify-cms
+  repo: C3PablO/zaidaescobar
 
 media_folder: static/img
 public_folder: /img
