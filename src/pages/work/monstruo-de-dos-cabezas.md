@@ -12,10 +12,9 @@ images:
   - image: /img/monstruo004.jpg
   - image: /img/monstruo005.jpg
   - image: /img/monstruo006.jpg
-  - image: /img/monstruo008.jpg
   - image: /img/monstruo007.jpg
+  - image: /img/monstruo008.jpg
   - image: /img/monstruo009.jpg
-
 tags:
   - cuaderno de artista
   - dibujos
