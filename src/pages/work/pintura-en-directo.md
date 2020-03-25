@@ -13,7 +13,7 @@ images:
   - image: /img/livepainting005.jpg
   - image: /img/livepainting006.jpg
   - image: /img/livepainting007.jpg
-  - image: /img/livepainting008.jpg
+  - image: /img/livepainting008-min.jpg
   - image: /img/livepainting009.jpg
   - image: /img/livepainting011.jpg
   - image: /img/livepainting012.jpg
