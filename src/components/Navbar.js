@@ -73,7 +73,11 @@ const Navbar = class extends React.Component {
           </div>
           <div className="top-nav--section">
             <div className="top-nav--button--wrapper">
-              <button className="top-nav--button" onClick={this.toggleHamburger}>
+              <button
+                aria-label={this.state.isOpen ? 'Close Menu' : 'Open Menu'}
+                className="top-nav--button"
+                onClick={this.toggleHamburger}
+              >
                 <Hamburger isOpen={this.state.isOpen} />
               </button>
             </div>
