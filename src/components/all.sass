@@ -168,8 +168,10 @@ a
 
 
 .grid-item
-    padding: 0 2px 5px 2px;
-    cursor: pointer;
+  padding: 0 2px 5px 2px;
+  cursor: pointer;
+.grid-item:focus
+  outline: 0;
 
 .categories
   text-align: right;
@@ -284,8 +286,9 @@ a
     text-decoration: none;
     margin: 10px;
 
-.top-nav--link:hover
-  text-decoration: underline
+.top-nav--link:hover, .top-nav--link:focus
+  outline: 0;
+  text-decoration: underline;
   
 .logo
   font-family: 'Abril Fatface','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;

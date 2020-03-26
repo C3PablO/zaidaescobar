@@ -68,6 +68,7 @@ class IndexPage extends React.PureComponent {
   render() {
     const { frontmatter } = this.props.data.markdownRemark
     return (
+      <React.Fragment>
       <Content
         image={frontmatter.image}
         title={frontmatter.title}
@@ -77,6 +78,7 @@ class IndexPage extends React.PureComponent {
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
+      </React.Fragment>
     );
   }
 };

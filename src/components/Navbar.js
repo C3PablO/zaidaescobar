@@ -18,34 +18,6 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <div>
-        <div className={this.state.isOpen ? 'top-nav-links top-nav-links__active' : 'top-nav-links'}>
-          <div>
-            <Link
-              to="/#work"
-              className="top-nav--link"
-              onClick={this.toggleHamburger}
-              data-scroll="work"
-            >
-              Obra
-            </Link>
-            <Link
-              to="/#about"
-              className="top-nav--link"
-              onClick={this.toggleHamburger}
-              data-scroll="about"
-            >
-              Sobre mi
-            </Link>
-            <Link
-              to="/#contact"
-              className="top-nav--link"
-              onClick={this.toggleHamburger}
-              data-scroll="contact"
-            >
-              Contacto
-            </Link>
-          </div>
-        </div>
         <nav className="top-nav">
           <div className="top-nav--social top-nav--section">
             <a title="instagram" href="https://www.instagram.com/zaidaescobart/" target="_blank" rel="noopener noreferrer">
@@ -83,6 +55,34 @@ const Navbar = class extends React.Component {
             </div>
           </div>
         </nav>
+        <div className={this.state.isOpen ? 'top-nav-links top-nav-links__active' : 'top-nav-links'}>
+          <div>
+            <Link
+              to="/#work"
+              className="top-nav--link"
+              onClick={this.toggleHamburger}
+              data-scroll="work"
+            >
+              Obra
+            </Link>
+            <Link
+              to="/#about"
+              className="top-nav--link"
+              onClick={this.toggleHamburger}
+              data-scroll="about"
+            >
+              Sobre mi
+            </Link>
+            <Link
+              to="/#contact"
+              className="top-nav--link"
+              onClick={this.toggleHamburger}
+              data-scroll="contact"
+            >
+              Contacto
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }
