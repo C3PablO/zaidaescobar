@@ -15,7 +15,6 @@ images:
   - image: /img/monstruo007.jpg
   - image: /img/monstruo008.jpg
   - image: /img/monstruo009.jpg
-  - image: /img/8_2.jpg
 tags:
   - cuaderno de artista
   - dibujos
