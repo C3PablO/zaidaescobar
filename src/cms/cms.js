@@ -3,7 +3,7 @@ import { SketchPicker } from 'react-color'
 import CMS from 'netlify-cms-app'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 import cloudinary from 'netlify-cms-media-library-cloudinary'
-
+import WorkPostPreview from './preview-templates/WorkPostPreview'
 
 class ColorControl extends React.PureComponent {
   render() {
@@ -41,4 +41,4 @@ CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
 // adding templates
-// CMS.registerPreviewTemplate('index', IndexPagePreview)
+CMS.registerPreviewTemplate('work', WorkPostPreview)

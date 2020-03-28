@@ -25,6 +25,7 @@ export class WorkPostTemplate extends React.PureComponent {
       helmet,
       slug,
       gallery,
+      admin,
     } = this.props;
     const PostContent = contentComponent || Content
     return (
@@ -57,10 +58,14 @@ export class WorkPostTemplate extends React.PureComponent {
         <Masonry images={images} cols={3} onClick={(index) => {
           this.gallery.current.openLightbox(index);
         }} />
-        <div className="bottom-section" style={{ marginTop: 30 }}>
-          <WorkNav current={slug} />
-          <BlogRoll />
-        </div>
+        {
+          !admin && (
+            <div className="bottom-section" style={{ marginTop: 30 }}>
+              <WorkNav current={slug} />
+              <BlogRoll />
+            </div>
+          )
+        }
       </div>
     );
   }
