@@ -13,7 +13,10 @@ class TagRoute extends React.Component {
     return (
       <section>
         <Helmet title={`${tag} | ${title}`} />
-          <div className="index-page" style={{ minHeight: window.screen.height - 260 }}>
+          <div
+            className="index-page"
+            style={{ minHeight: window ? window.screen.height - 260: '100vh' }}
+          >
             <div className="index-page--wrapper">
               <h1>{tagTitle}</h1>
               <BlogRoll posts={this.props.data.allMarkdownRemark.edges} equal />
