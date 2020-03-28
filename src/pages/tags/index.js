@@ -11,7 +11,7 @@ const TagsPage = ({
     },
   },
 }) => (
-  <div className="index-page sections-list">
+  <div className="index-page sections-list" style={{ minHeight: window.screen.height - 260 }}>
     <Helmet title={`Obra | ${title}`} />
     <div className="index-page--wrapper">
       <header className="main-header">
