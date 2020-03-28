@@ -15,6 +15,7 @@ const TagsPage = ({
     <Helmet title={`Obra | ${title}`} />
     <div className="index-page--wrapper">
       <header className="main-header">
+        <h1 style={{ marginBottom: 50 }}>Categorías</h1>
       </header>
       <Tags />
     </div>

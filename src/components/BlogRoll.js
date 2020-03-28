@@ -38,13 +38,13 @@ class Item extends PureComponent {
   }
 
   render() {
-    const { imageInfo } = this.props;
+    const { imageInfo, className } = this.props;
     const { active } = this.state;
     return (
       <>
       <article
         key={imageInfo.node.id}
-        className={classNames('work-pod', active ?'work-pod__active' : undefined)}
+        className={classNames('work-pod', active ?'work-pod__active' : undefined, className)}
       >
         <div className="work-pod--content">
           <Link to={imageInfo.node.fields.slug} onClick={this.onClick}>
@@ -81,14 +81,20 @@ class Item extends PureComponent {
     )
   }
 }
-class BlogRoll extends React.PureComponent {
+
+const ItemEqual = (props) => <Item { ...props} className="work-pod__equal" />;
+
+export class BlogRoll extends React.PureComponent {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { posts, equal } = this.props;
+
+    if (!posts) {
+      return '';
+    }
 
     return (
       <div className="columns is-multiline">
-        <Masonry images={posts} cols={3} renderer={Item} />
+        <Masonry images={posts} cols={3} renderer={equal ? ItemEqual : Item}/>
         <div id="veil" />
       </div>
     )
@@ -135,6 +141,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <BlogRoll posts={data.allMarkdownRemark.edges} count={count} />}
   />
 )

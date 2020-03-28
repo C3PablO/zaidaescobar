@@ -1,40 +1,28 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+import { BlogRoll } from '../components/BlogRoll';
 
 class TagRoute extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    const postLinks = posts.map(post => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
-        </Link>
-      </li>
-    ))
-    const tag = this.props.pageContext.tag
+    console.log(this.props.data.allMarkdownRemark.edges);
+    const tag = this.props.pageContext.tag;
+    const tagTitle = tag.charAt(0).toUpperCase() + tag.substring(1);
     const title = this.props.data.site.siteMetadata.title
-    const totalCount = this.props.data.allMarkdownRemark.totalCount
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? '' : 's'
-    } tagged with “${tag}”`
 
     return (
       <section>
         <Helmet title={`${tag} | ${title}`} />
-        <div>
-          <div>
-            <div
-              style={{ marginBottom: '6rem' }}
-            >
-              <h3>{tagHeader}</h3>
-              <ul>{postLinks}</ul>
-              <p>
-                <Link to="/tags/">Ver todas las Categorias</Link>
-              </p>
+          <div className="index-page" style={{ minHeight: window.screen.height - 260 }}>
+            <div className="index-page--wrapper">
+              <h1>{tagTitle}</h1>
+              <BlogRoll posts={this.props.data.allMarkdownRemark.edges} equal />
+              
+              <div class="more-sections">
+                <Link to="/tags/">Todas las Categorias</Link>
+              </div>
             </div>
           </div>
-        </div>
       </section>
     )
   }
@@ -62,6 +50,16 @@ export const tagPageQuery = graphql`
           }
           frontmatter {
             title
+            color
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500, quality: 60) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            heading
+            subheading
           }
         }
       }

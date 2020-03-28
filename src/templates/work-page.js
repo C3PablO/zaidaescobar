@@ -1,13 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-//  import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import Content, { HTMLContent } from '../components/Content'
-import Masonry from '../components/Masonry'
-import BlogRoll from '../components/BlogRoll'
-import WorkNav from '../components/WorkNav'
-import Gallery from '../components/Gallery'
+import React from 'react';
+import PropTypes from 'prop-types';
+import kebabCase from 'lodash/kebabCase';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import { Link } from 'gatsby';
+import Content, { HTMLContent } from '../components/Content';
+import Masonry from '../components/Masonry';
+import BlogRoll from '../components/BlogRoll';
+import WorkNav from '../components/WorkNav';
+import Gallery from '../components/Gallery';
 
 export class WorkPostTemplate extends React.PureComponent {
   state = {}
@@ -46,7 +47,7 @@ export class WorkPostTemplate extends React.PureComponent {
               <ul className="tags">
                 {tags.map((tag, i) => (
                   <li key={tag + `tag`} className="tags--tag">
-                    {tag}{tags.length - 1 !== i && ','}
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>{tags.length - 1 !== i && ','}
                   </li>
                 ))}
               </ul>
@@ -64,9 +65,6 @@ export class WorkPostTemplate extends React.PureComponent {
     );
   }
 }
-
-// use this to link to the tags page instead
-//<Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
 
 WorkPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
