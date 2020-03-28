@@ -15,7 +15,7 @@ class TagRoute extends React.Component {
         <Helmet title={`${tag} | ${title}`} />
           <div
             className="index-page"
-            style={{ minHeight: window ? window.screen.height - 260: '100vh' }}
+            style={{ minHeight:'100vh' }}
           >
             <div className="index-page--wrapper">
               <h1>{tagTitle}</h1>

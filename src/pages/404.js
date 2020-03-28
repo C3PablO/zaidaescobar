@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 const NotFoundPage = () => (
   <div style={{
-    marginTop: 100, textAlign: 'center', minHeight: window ? window.screen.height - 260: '100vh'
+    marginTop: 100, textAlign: 'center', minHeight:'100vh'
     }}
   >
     <h1>ERROR</h1>
