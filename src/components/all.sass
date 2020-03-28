@@ -462,12 +462,14 @@ a
   animation-duration: .2s;
 
 .work-pod.work-pod__active
+  opacity: 0;
   z-index: 101;
   animation-name: hidescale;
   animation-duration: .8s;
 
 @keyframes hidescale
   0%
+    opacity: 1;
     transform: scale(1);
   40%
     opacity: 1;
@@ -481,6 +483,7 @@ a
 
 @keyframes hideup
   0%
+    opacity: 1;
     transform: translateY(0px);
   60%
     transform: translateY(-50px);
