@@ -55,7 +55,7 @@ export class WorkPostTemplate extends React.PureComponent {
             </div>
           )
         }
-        <Masonry images={images} cols={3} onClick={(index) => {
+        <Masonry images={images} onClick={(index) => {
           this.gallery.current.openLightbox(index);
         }} />
         {

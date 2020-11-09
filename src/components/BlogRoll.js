@@ -94,7 +94,7 @@ export class BlogRoll extends React.PureComponent {
 
     return (
       <div className="columns is-multiline">
-        <Masonry images={posts} cols={3} renderer={equal ? ItemEqual : Item}/>
+        <Masonry images={posts} renderer={equal ? ItemEqual : Item}/>
         <div id="veil" />
       </div>
     )

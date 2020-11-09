@@ -1,8 +1,8 @@
 import React from 'react'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-const Masonry = ({ cols = 2, images, renderer, onClick }) => {
-const columns = createColumns(images, cols);
+const Masonry = ({ images, renderer, onClick }) => {
+const columns = createColumns(images);
 const Image = renderer || PreviewCompatibleImage;
 
  return (
@@ -39,13 +39,19 @@ const Image = renderer || PreviewCompatibleImage;
  );
 };
 
-const createColumns = (array = [], chunk = 2) => {
+const createColumns = (array = []) => {
+  const chunk = 3;
+  const rest = Math.floor(array.length % chunk);
   const arrayColumns = [];
   for (let i = 0; i < chunk; i++) {
     arrayColumns.push([]);
   }
   array.forEach((item, i) => {
-    arrayColumns[i % arrayColumns.length].push({ item, index: i})
+    if (i == array.length - 1 && rest == 1) {
+      arrayColumns[1].push({ item, index: i});
+    } else {
+      arrayColumns[i % arrayColumns.length].push({ item, index: i});
+    }
   });
 
   return arrayColumns;
