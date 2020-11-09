@@ -47,7 +47,7 @@ const createColumns = (array = []) => {
     arrayColumns.push([]);
   }
   array.forEach((item, i) => {
-    if (i == array.length - 1 && rest == 1) {
+    if (i === array.length - 1 && rest === 1) {
       arrayColumns[1].push({ item, index: i});
     } else {
       arrayColumns[i % arrayColumns.length].push({ item, index: i});
