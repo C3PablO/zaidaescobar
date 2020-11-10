@@ -69,7 +69,7 @@ export default class Index extends React.Component {
           </div>
           <div>
             <label htmlFor={'email'}>
-              Email
+              Correo electrónico
             </label>
             <div>
               <input
