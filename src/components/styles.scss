@@ -175,6 +175,7 @@ a {
 }
 
 .grid-col {
+    width: 100%;
     flex-grow: 1;
 }
 
@@ -458,15 +459,29 @@ a {
     text-align: center;
 }
 
+.contact-component--actions {
+    display: flex;
+    justify-content: center;
+}
 .contact-component--submit {
     margin-top: 10px;
     background: #312f40;
     color: #fefffb;
     font-size: 1.2rem;
-    border: none;
+    border: 2px solid #312f40;
     border-radius: 5px;
     padding: 10px;
     min-width: 100px;
+    transition: all 200ms;
+    cursor: pointer;
+    width: 150px;
+    max-width: 100%;
+}
+
+.contact-component--submit:hover {
+    background: transparent;
+    color: #312f40;
+    transition: all 200ms;
 }
 
 .page-thanks {
