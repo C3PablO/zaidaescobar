@@ -21,6 +21,4 @@ tags:
 ---
 El hilo ediciones, 2019. Escrito por Itziar Fernández Cortés, es un libro ilustrado que pretende aproximar la teoría del apego a adolescentes y personas adultas de una forma amable, tierna y cercana.
 
-<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/XtMyp2cdiVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 Invitando a la reflexión sobre qué aspectos del adulto o adulta que somos hoy están relacionados con las experiencias vividas con nuestras figuras de apego durante la infancia.
