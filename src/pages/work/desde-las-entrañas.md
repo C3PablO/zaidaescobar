@@ -2,8 +2,8 @@
 templateKey: work-page
 title: Desde las entrañas
 date: 2019-09-07T15:55:10.268Z
-order: 2
-color: '#c3a822'
+order: 4
+color: "#c3a822"
 image: /img/dle2_2-min.jpg
 images:
   - image: /img/dle5-min.jpg
@@ -15,7 +15,6 @@ images:
   - image: /img/4e.jpg
   - image: /img/3.jpg
   - image: /img/7e.jpg
-  
 tags:
   - editorial
   - ilustración
