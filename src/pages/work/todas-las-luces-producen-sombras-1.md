@@ -4,7 +4,7 @@ title: Todas las luces producen sombras
 date: 2022-07-06T10:11:53.730Z
 order: 1
 color: "#241b51"
-image: /img/30-lucesysombrasweb.jpg
+image: /img/13-14-15-web.jpg
 images:
   - image: /img/pared2web.jpg
   - image: /img/11_5-web.jpg
