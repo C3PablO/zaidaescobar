@@ -14,6 +14,7 @@ images:
   - image: /img/32-33-34-35-paredweb.jpg
 tags:
   - arte
+  - exposición
 ---
 Esta obra pretende profundizar en experiencias fundamentales de la condición humana, como las emociones, el duelo, la conciencia y la espiritualidad, y la relación intrínseca de todo ello con la naturaleza. Es un diálogo entre la sombra y la luz propias. Más bien es un elogio a la sombra, puesto que la sombra es nuestra identidad. Si la sombra desaparece, nos desvanecemos con ella. Citando a Carl. G. Jung “ Nadie se ilumina fantaseando figuras de luz, si no haciendo consciente su oscuridad.”
 
