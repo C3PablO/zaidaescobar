@@ -12,8 +12,8 @@ images:
   - image: /img/28-29-30-web.jpg
   - image: /img/30-lucesysombrasweb.jpg
   - image: /img/5-lucesysombrasweb.jpg
-  - image: /img/19-lucesysombrasweb.jpg
   - image: /img/25-lucesysombras-web.jpg
+  - image: /img/19-lucesysombrasweb.jpg
   - image: /img/32-33-34-35-paredweb.jpg
 tags:
   - arte
