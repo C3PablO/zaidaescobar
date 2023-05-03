@@ -4,7 +4,7 @@ title: Cabezas
 date: 2023-05-03T16:42:32.189Z
 order: 1
 color: "#ae1535"
-image: /img/img_2020.jpeg
+image: /img/10herencia.jpg
 images:
   - image: /img/img_2020.jpeg
 ---
