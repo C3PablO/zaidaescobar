@@ -3,7 +3,7 @@ templateKey: work-page
 title: Cabezas
 date: 2023-05-03T18:45:27.081Z
 order: 1
-color: "#301e97"
+color: "#e2c621"
 image: /img/img_2261.jpeg
 images:
   - image: /img/img_2266.jpeg
