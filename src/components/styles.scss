@@ -877,6 +877,10 @@ a {
     animation-fill-mode: forwards;
 }
 
+iframe {
+    max-width: 100%;
+}
+
 @keyframes bun-top-out {
     0% {
         left: 0;
