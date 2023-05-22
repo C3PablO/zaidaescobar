@@ -6,12 +6,14 @@ order: 1
 color: "#000000"
 image: /img/img_2261.jpeg
 images:
-  - image: /img/img_2266.jpeg
-  - image: /img/img_2262.jpeg
   - image: /img/img_2264.jpeg
   - image: /img/img_2265.jpeg
   - image: /img/img_2263.jpeg
   - image: /img/img_2270.jpeg
+  - image: /img/img_2407.jpg
+  - image: /img/img_2406.jpg
+  - image: /img/img_2404.jpg
+  - image: /img/img_2405.jpg
 tags:
   - Proyecto
 ---
